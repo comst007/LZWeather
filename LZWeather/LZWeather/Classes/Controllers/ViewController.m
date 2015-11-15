@@ -12,6 +12,7 @@
 #import "TWMessageBarManager.h"
 #import "LZLabelView.h"
 #import "LZLineBakgroundView.h"
+#import "LZLongpressButton.h"
 @interface ViewController ()<TWMessageBarStyleSheet>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -54,9 +55,16 @@
     [barManager showMessageWithTitle:@"can not get location" description:@"hello  world" type:TWMessageBarMessageTypeError duration:2];
      */
     
-    LZLineBakgroundView *backView = [LZLineBakgroundView linebackgroundViewWithWith:4 lineGap:4 lineColor:[UIColor redColor] frame:self.view.frame];
+    LZLineBakgroundView *backView = [LZLineBakgroundView linebackgroundViewWithWith:4 lineGap:4 lineColor:[UIColor blackColor] frame:self.view.frame];
     //backView.center = self.view.center;
     [self.view addSubview:backView];
+    
+    LZLongpressButton *pressButton = [[LZLongpressButton alloc] initWithFrame:CGRectMake(0, 0, self.view.width - 20, 50)];
+    
+    [self.view addSubview:pressButton];
+    
+    pressButton.center = self.view.center;
+    
     
     
     

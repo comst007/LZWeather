@@ -64,6 +64,9 @@
 		CB9DD93C1BF5D9550005FE2B /* LZLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD93B1BF5D9550005FE2B /* LZLabelView.m */; };
 		CB9DD93F1BF727340005FE2B /* LZLineBakgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD93E1BF727340005FE2B /* LZLineBakgroundView.m */; };
 		CB9DD9411BF72C3A0005FE2B /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9DD9401BF72C3A0005FE2B /* Reveal.framework */; };
+		CB9DD9441BF908540005FE2B /* LZLongpressButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD9431BF908540005FE2B /* LZLongpressButton.m */; };
+		CB9DD9451BF91E400005FE2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7CB78D1BF3C8AB008281DC /* Main.storyboard */; };
+		CB9DD9461BF91E490005FE2B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7CB78B1BF3C8AB008281DC /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +207,8 @@
 		CB9DD93D1BF727340005FE2B /* LZLineBakgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLineBakgroundView.h; sourceTree = "<group>"; };
 		CB9DD93E1BF727340005FE2B /* LZLineBakgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLineBakgroundView.m; sourceTree = "<group>"; };
 		CB9DD9401BF72C3A0005FE2B /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		CB9DD9421BF908540005FE2B /* LZLongpressButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLongpressButton.h; sourceTree = "<group>"; };
+		CB9DD9431BF908540005FE2B /* LZLongpressButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLongpressButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,6 +540,8 @@
 				CB9DD93B1BF5D9550005FE2B /* LZLabelView.m */,
 				CB9DD93D1BF727340005FE2B /* LZLineBakgroundView.h */,
 				CB9DD93E1BF727340005FE2B /* LZLineBakgroundView.m */,
+				CB9DD9421BF908540005FE2B /* LZLongpressButton.h */,
+				CB9DD9431BF908540005FE2B /* LZLongpressButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -640,6 +647,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9DD9461BF91E490005FE2B /* LaunchScreen.xib in Resources */,
+				CB9DD9451BF91E400005FE2B /* Main.storyboard in Resources */,
 				CB6F508C1BF4FB5F008F8D89 /* Weather&Time.ttf in Resources */,
 				CB6F50881BF4FB5F008F8D89 /* Lato-Light.ttf in Resources */,
 				CB6F508B1BF4FB5F008F8D89 /* Lato-ThinItalic.ttf in Resources */,
@@ -677,6 +686,7 @@
 				CB6F51291BF50CBA008F8D89 /* POPCustomAnimation.mm in Sources */,
 				CB7CB7A51BF3CEF2008281DC /* LZForecastRequest.m in Sources */,
 				CB6F50701BF4D089008F8D89 /* LZSys.m in Sources */,
+				CB9DD9441BF908540005FE2B /* LZLongpressButton.m in Sources */,
 				CB6F509B1BF50302008F8D89 /* NSString+StringHeight.m in Sources */,
 				CB6F51241BF50CBA008F8D89 /* POPAnimationRuntime.mm in Sources */,
 				CB6F50931BF50076008F8D89 /* NSString+Color.m in Sources */,
