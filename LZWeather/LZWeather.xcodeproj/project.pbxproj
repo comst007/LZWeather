@@ -60,6 +60,10 @@
 		CB7CB79C1BF3C98E008281DC /* LZGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7CB79B1BF3C98E008281DC /* LZGlobal.m */; };
 		CB7CB79F1BF3CA07008281DC /* LZWeatherRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7CB79E1BF3CA07008281DC /* LZWeatherRequest.m */; };
 		CB7CB7A51BF3CEF2008281DC /* LZForecastRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7CB7A41BF3CEF2008281DC /* LZForecastRequest.m */; };
+		CB9DD9391BF5D4D60005FE2B /* TWMessageBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD9381BF5D4D60005FE2B /* TWMessageBarManager.m */; };
+		CB9DD93C1BF5D9550005FE2B /* LZLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD93B1BF5D9550005FE2B /* LZLabelView.m */; };
+		CB9DD93F1BF727340005FE2B /* LZLineBakgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD93E1BF727340005FE2B /* LZLineBakgroundView.m */; };
+		CB9DD9411BF72C3A0005FE2B /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9DD9401BF72C3A0005FE2B /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +197,13 @@
 		CB7CB79E1BF3CA07008281DC /* LZWeatherRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZWeatherRequest.m; sourceTree = "<group>"; };
 		CB7CB7A31BF3CEF2008281DC /* LZForecastRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZForecastRequest.h; sourceTree = "<group>"; };
 		CB7CB7A41BF3CEF2008281DC /* LZForecastRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZForecastRequest.m; sourceTree = "<group>"; };
+		CB9DD9371BF5D4D60005FE2B /* TWMessageBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMessageBarManager.h; sourceTree = "<group>"; };
+		CB9DD9381BF5D4D60005FE2B /* TWMessageBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMessageBarManager.m; sourceTree = "<group>"; };
+		CB9DD93A1BF5D9550005FE2B /* LZLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLabelView.h; sourceTree = "<group>"; };
+		CB9DD93B1BF5D9550005FE2B /* LZLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLabelView.m; sourceTree = "<group>"; };
+		CB9DD93D1BF727340005FE2B /* LZLineBakgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLineBakgroundView.h; sourceTree = "<group>"; };
+		CB9DD93E1BF727340005FE2B /* LZLineBakgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLineBakgroundView.m; sourceTree = "<group>"; };
+		CB9DD9401BF72C3A0005FE2B /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6F51331BF50DF9008F8D89 /* CoreFoundation.framework in Frameworks */,
+				CB9DD9411BF72C3A0005FE2B /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +369,7 @@
 		CB7CB74A1BF3C7A6008281DC = {
 			isa = PBXGroup;
 			children = (
+				CB9DD9401BF72C3A0005FE2B /* Reveal.framework */,
 				CB6F51321BF50DF9008F8D89 /* CoreFoundation.framework */,
 				CB7CB7551BF3C7A6008281DC /* LZWeather */,
 				CB7CB76F1BF3C7A6008281DC /* LZWeatherTests */,
@@ -516,6 +529,12 @@
 		CB7CB7891BF3C8AB008281DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB9DD9371BF5D4D60005FE2B /* TWMessageBarManager.h */,
+				CB9DD9381BF5D4D60005FE2B /* TWMessageBarManager.m */,
+				CB9DD93A1BF5D9550005FE2B /* LZLabelView.h */,
+				CB9DD93B1BF5D9550005FE2B /* LZLabelView.m */,
+				CB9DD93D1BF727340005FE2B /* LZLineBakgroundView.h */,
+				CB9DD93E1BF727340005FE2B /* LZLineBakgroundView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -651,6 +670,8 @@
 				CB6F50761BF4DE62008F8D89 /* LZCity.m in Sources */,
 				CB6F51231BF50CBA008F8D89 /* POPAnimationExtras.mm in Sources */,
 				CB6F51311BF50CBA008F8D89 /* TransformationMatrix.cpp in Sources */,
+				CB9DD9391BF5D4D60005FE2B /* TWMessageBarManager.m in Sources */,
+				CB9DD93F1BF727340005FE2B /* LZLineBakgroundView.m in Sources */,
 				CB6F51281BF50CBA008F8D89 /* POPCGUtils.mm in Sources */,
 				CB6F51481BF51187008F8D89 /* UIBezierPath+TextPaths.m in Sources */,
 				CB6F51291BF50CBA008F8D89 /* POPCustomAnimation.mm in Sources */,
@@ -663,6 +684,7 @@
 				CB6F51271BF50CBA008F8D89 /* POPBasicAnimation.mm in Sources */,
 				CB6F512E1BF50CBA008F8D89 /* POPPropertyAnimation.mm in Sources */,
 				CB6F51401BF510C2008F8D89 /* ConfigAttributedString.m in Sources */,
+				CB9DD93C1BF5D9550005FE2B /* LZLabelView.m in Sources */,
 				CB7CB79C1BF3C98E008281DC /* LZGlobal.m in Sources */,
 				CB6F51201BF50CBA008F8D89 /* POPAnimatableProperty.mm in Sources */,
 				CB7CB79F1BF3CA07008281DC /* LZWeatherRequest.m in Sources */,
@@ -814,8 +836,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LZWeather/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -824,6 +856,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LZWeather/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
