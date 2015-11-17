@@ -143,8 +143,9 @@
    return self.normalLabel.text;
 }
 
+@synthesize font = _font;
 - (void)setFont:(UIFont *)font{
-    self.font = font;
+    _font = font;
     self.normalLabel.font = font;
     self.highlightLabel.font = font;
     

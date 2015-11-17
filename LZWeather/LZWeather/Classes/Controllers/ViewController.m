@@ -15,6 +15,10 @@
 #import "LZLongpressButton.h"
 #import "LZLoadview.h"
 #import "UIView+SetRect.h"
+#import "LZStringPathView.h"
+#import "LZFadeBlackView.h"
+#import "LZSnowView.h"
+#import "LZRainView.h"
 @interface ViewController ()<TWMessageBarStyleSheet>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -66,11 +70,12 @@
     [self.view addSubview:pressButton];
     
     pressButton.center = self.view.center;
-    */
+    
     
     LZLoadview *view = [[LZLoadview alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:view];
     [view show];
+     */
     
     
     
@@ -97,8 +102,28 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
 
+    /*
     self.labelview = [LZLabelView labelWithText:@"长按刷新" origin:CGPointMake(100, 100)];
     [self.view addSubview:self.labelview];
+     
+    LZStringPathView *pathView = [[LZStringPathView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+    pathView.center = self.view.center;
+    [self.view addSubview:pathView];
+    pathView.text = @"Hello World";
+    [pathView buildView];
+    [pathView percentage:1 animated:YES];
+     
+    LZFadeBlackView *view = [[LZFadeBlackView alloc] initWithFrame:self.view.bounds];
+    
+    [self.view addSubview:view];
+    
+    [view show];
+     */
+    LZRainView *rainView = [[LZRainView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+    rainView.center = self.view.center;
+    rainView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:rainView];
+    [rainView show];
 }
 
 @end

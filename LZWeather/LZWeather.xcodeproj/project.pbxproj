@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9221BFA145100748C94 /* LZStringPathView.m */; };
+		CB24A9261BFA231B00748C94 /* LZFadeBlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9251BFA231B00748C94 /* LZFadeBlackView.m */; };
+		CB24A9291BFA41F600748C94 /* LZEmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9281BFA41F600748C94 /* LZEmitterLayerView.m */; };
+		CB24A92C1BFA442800748C94 /* LZSnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A92B1BFA442800748C94 /* LZSnowView.m */; };
+		CB24A92F1BFA60DB00748C94 /* LZRainView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A92E1BFA60DB00748C94 /* LZRainView.m */; };
+		CB24A9321BFA6D9E00748C94 /* CALayer+LZMaskLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9311BFA6D9E00748C94 /* CALayer+LZMaskLayer.m */; };
 		CB6F50611BF4CBF1008F8D89 /* LZCoord.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F50601BF4CBF1008F8D89 /* LZCoord.m */; };
 		CB6F50641BF4CC5E008F8D89 /* LZWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F50631BF4CC5E008F8D89 /* LZWeather.m */; };
 		CB6F50671BF4CF19008F8D89 /* LZMain.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6F50661BF4CF19008F8D89 /* LZMain.m */; };
@@ -82,6 +88,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB24A9211BFA145100748C94 /* LZStringPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStringPathView.h; sourceTree = "<group>"; };
+		CB24A9221BFA145100748C94 /* LZStringPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStringPathView.m; sourceTree = "<group>"; };
+		CB24A9241BFA231B00748C94 /* LZFadeBlackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFadeBlackView.h; sourceTree = "<group>"; };
+		CB24A9251BFA231B00748C94 /* LZFadeBlackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFadeBlackView.m; sourceTree = "<group>"; };
+		CB24A9271BFA41F600748C94 /* LZEmitterLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZEmitterLayerView.h; sourceTree = "<group>"; };
+		CB24A9281BFA41F600748C94 /* LZEmitterLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZEmitterLayerView.m; sourceTree = "<group>"; };
+		CB24A92A1BFA442800748C94 /* LZSnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSnowView.h; sourceTree = "<group>"; };
+		CB24A92B1BFA442800748C94 /* LZSnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSnowView.m; sourceTree = "<group>"; };
+		CB24A92D1BFA60DB00748C94 /* LZRainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRainView.h; sourceTree = "<group>"; };
+		CB24A92E1BFA60DB00748C94 /* LZRainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRainView.m; sourceTree = "<group>"; };
+		CB24A9301BFA6D9E00748C94 /* CALayer+LZMaskLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+LZMaskLayer.h"; sourceTree = "<group>"; };
+		CB24A9311BFA6D9E00748C94 /* CALayer+LZMaskLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+LZMaskLayer.m"; sourceTree = "<group>"; };
 		CB6F505F1BF4CBF1008F8D89 /* LZCoord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCoord.h; sourceTree = "<group>"; };
 		CB6F50601BF4CBF1008F8D89 /* LZCoord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCoord.m; sourceTree = "<group>"; };
 		CB6F50621BF4CC5E008F8D89 /* LZWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZWeather.h; sourceTree = "<group>"; };
@@ -552,6 +570,18 @@
 				CB9DD9481BF9CF320005FE2B /* LZLoadview.m */,
 				CB9DD94A1BF9D2030005FE2B /* LZRectsDuringAnimation.h */,
 				CB9DD94B1BF9D2030005FE2B /* LZRectsDuringAnimation.m */,
+				CB24A9211BFA145100748C94 /* LZStringPathView.h */,
+				CB24A9221BFA145100748C94 /* LZStringPathView.m */,
+				CB24A9241BFA231B00748C94 /* LZFadeBlackView.h */,
+				CB24A9251BFA231B00748C94 /* LZFadeBlackView.m */,
+				CB24A9271BFA41F600748C94 /* LZEmitterLayerView.h */,
+				CB24A9281BFA41F600748C94 /* LZEmitterLayerView.m */,
+				CB24A92A1BFA442800748C94 /* LZSnowView.h */,
+				CB24A92B1BFA442800748C94 /* LZSnowView.m */,
+				CB24A92D1BFA60DB00748C94 /* LZRainView.h */,
+				CB24A92E1BFA60DB00748C94 /* LZRainView.m */,
+				CB24A9301BFA6D9E00748C94 /* CALayer+LZMaskLayer.h */,
+				CB24A9311BFA6D9E00748C94 /* CALayer+LZMaskLayer.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -686,6 +716,7 @@
 				CB6F50671BF4CF19008F8D89 /* LZMain.m in Sources */,
 				CB6F506A1BF4CFDE008F8D89 /* LZWind.m in Sources */,
 				CB6F51301BF50CBA008F8D89 /* POPVector.mm in Sources */,
+				CB24A9321BFA6D9E00748C94 /* CALayer+LZMaskLayer.m in Sources */,
 				CB6F50761BF4DE62008F8D89 /* LZCity.m in Sources */,
 				CB6F51231BF50CBA008F8D89 /* POPAnimationExtras.mm in Sources */,
 				CB6F51311BF50CBA008F8D89 /* TransformationMatrix.cpp in Sources */,
@@ -709,6 +740,7 @@
 				CB6F51201BF50CBA008F8D89 /* POPAnimatableProperty.mm in Sources */,
 				CB7CB79F1BF3CA07008281DC /* LZWeatherRequest.m in Sources */,
 				CB9DD9491BF9CF320005FE2B /* LZLoadview.m in Sources */,
+				CB24A9261BFA231B00748C94 /* LZFadeBlackView.m in Sources */,
 				CB6F512D1BF50CBA008F8D89 /* POPMath.mm in Sources */,
 				CB6F50611BF4CBF1008F8D89 /* LZCoord.m in Sources */,
 				CB6F513A1BF50FA8008F8D89 /* YXEasing.m in Sources */,
@@ -723,16 +755,20 @@
 				CB6F51251BF50CBA008F8D89 /* POPAnimationTracer.mm in Sources */,
 				CB6F507C1BF4E357008F8D89 /* LZListItem.m in Sources */,
 				CB9DD94C1BF9D2030005FE2B /* LZRectsDuringAnimation.m in Sources */,
+				CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */,
 				CB6F50641BF4CC5E008F8D89 /* LZWeather.m in Sources */,
+				CB24A92C1BFA442800748C94 /* LZSnowView.m in Sources */,
 				CB6F51221BF50CBA008F8D89 /* POPAnimationEvent.mm in Sources */,
 				CB6F50731BF4D1B7008F8D89 /* LZWeatherInfo.m in Sources */,
 				CB6F506D1BF4D064008F8D89 /* LZClouds.m in Sources */,
 				CB6F50791BF4E236008F8D89 /* LZTemp.m in Sources */,
 				CB7CB7941BF3C8AB008281DC /* ViewController.m in Sources */,
+				CB24A9291BFA41F600748C94 /* LZEmitterLayerView.m in Sources */,
 				CB7CB7991BF3C8AB008281DC /* main.m in Sources */,
 				CB6F51211BF50CBA008F8D89 /* POPAnimation.mm in Sources */,
 				CB6F51471BF51187008F8D89 /* ARCGPathFromString.m in Sources */,
 				CB7CB7931BF3C8AB008281DC /* AppDelegate.m in Sources */,
+				CB24A92F1BFA60DB00748C94 /* LZRainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

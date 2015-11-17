@@ -10,7 +10,7 @@
 #import "LZLineBakgroundView.h"
 #import "LZLongpressButton.h"
 #import "LZRectsDuringAnimation.h"
-
+#import "LZFont.h"
 #define animationTime 1
 @interface LZLoadview ()<LZLongpressbuttonDelegate>
 
@@ -67,7 +67,7 @@
     self.pressbutton.center = self.center ;
     self.pressbutton.y = self.height - 60;
     self.pressbutton.delegate = self;
-    
+    self.pressbutton.font = [UIFont fontWithName:LZFontNameLight size:16];;
     self.pressButtonRects = [[LZRectsDuringAnimation alloc] init];
     self.pressButtonRects.midRect = self.pressbutton.frame;
     
