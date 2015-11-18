@@ -19,6 +19,8 @@
 #import "LZFadeBlackView.h"
 #import "LZSnowView.h"
 #import "LZRainView.h"
+#import "UIView+LZGlowView.h"
+#import "LZUpdateView.h"
 @interface ViewController ()<TWMessageBarStyleSheet>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -75,8 +77,20 @@
     LZLoadview *view = [[LZLoadview alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:view];
     [view show];
-     */
+   
+    UIView *glowview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+    glowview.center = self.view.center;
+    [self.view addSubview:glowview];
+    glowview.backgroundColor = [UIColor yellowColor];
     
+    [glowview createGlowLayer:[UIColor redColor] glowRadius:2];
+    
+    glowview.glowOpacity = @1;
+    glowview.glowDuration = @10;
+    glowview.glowInterval = @20;
+    
+    [glowview startGlow];
+     */
     
     
 }
@@ -118,12 +132,19 @@
     [self.view addSubview:view];
     
     [view show];
-     */
+     
     LZRainView *rainView = [[LZRainView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
     rainView.center = self.view.center;
     rainView.backgroundColor = [UIColor redColor];
     [self.view addSubview:rainView];
     [rainView show];
+     */
+    
+    LZUpdateView *updateView = [[LZUpdateView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    updateView.center = self.view.center;
+    updateView.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:updateView];
+    [updateView show];
 }
 
 @end

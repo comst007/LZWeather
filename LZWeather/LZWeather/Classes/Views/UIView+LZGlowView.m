@@ -79,19 +79,78 @@ static char glowShowFlagKey;
     glowLayer.shadowColor = color == nil ? [UIColor redColor].CGColor:color.CGColor;
     glowLayer.shadowRadius = (radius > 0) ? radius : 2;
     glowLayer.opacity = 0.0;
+    [self.layer addSublayer:glowLayer];
+    UIGraphicsEndImageContext();
     
     
 }
 
 - (void)startGlow{
     
+    for (CALayer *layer in self.layer.sublayers) {
+        if ([layer.name isEqualToString:@"glowlayer"]) {
+            if (self.glowViewShowFlag == nil) {
+                self.glowViewShowFlag = @(NO);
+            }
+            if (self.dispatchSource == nil) {
+                self.dispatchSource = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0 , 0, dispatch_get_main_queue());
+                dispatch_source_set_timer(self.dispatchSource, dispatch_time(DISPATCH_TIME_NOW, 0), NSEC_PER_SEC * (self.glowInterval == nil ? 1 : self.glowInterval.floatValue), 0);
+                
+                dispatch_source_set_event_handler(self.dispatchSource, ^{
+                    
+                    if (self.glowViewShowFlag.boolValue == NO) {
+                        self.glowViewShowFlag = @(YES);
+                        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+                        animation.fromValue = @(0);
+                        animation.toValue = self.glowOpacity == nil ?@(0.8):self.glowOpacity;
+                        layer.opacity = [animation.toValue floatValue];
+                        animation.duration = self.glowDuration == nil? 0.8 : self.glowDuration.floatValue;
+                        [layer addAnimation:animation forKey:nil];
+                    }else{
+                        self.glowViewShowFlag = @(NO);
+                        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+                        animation.fromValue = @(layer.opacity);
+                        animation.toValue = 0;
+                        animation.duration = self.glowDuration == nil? 0.8 : self.glowDuration.floatValue;
+                        layer.opacity = 0;
+                        [layer addAnimation:animation forKey:nil];
+                    }
+                    
+                });
+                dispatch_resume(self.dispatchSource);
+                
+            }
+        }
+    }
 }
 
 - (void)glowToGlowLayer{
-    
+    for (CALayer *layer in self.layer.sublayers) {
+        if ([layer.name isEqualToString:@"glowlayer"]) {
+            self.glowViewShowFlag = @(YES);
+            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+            animation.fromValue = @(0);
+            animation.toValue = self.glowOpacity == nil ?@(0.8):self.glowOpacity;
+            layer.opacity = [animation.toValue floatValue];
+            animation.duration = self.glowDuration == nil? 0.8 : self.glowDuration.floatValue;
+            [layer addAnimation:animation forKey:nil];
+        }
+    }
 }
 
--(void)glowToNormalLayer{
+- (void)glowToNormalLayer{
+    
+    for (CALayer *layer in self.layer.sublayers) {
+        if ([layer.name isEqualToString:@"glowlayer"]) {
+            self.glowViewShowFlag = @(NO);
+            CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+            animation.fromValue = @(layer.opacity);
+            animation.toValue = 0;
+            animation.duration = self.glowDuration == nil? 0.8 : self.glowDuration.floatValue;
+            layer.opacity = 0;
+            [layer addAnimation:animation forKey:nil];
+        }
+    }
     
 }
 

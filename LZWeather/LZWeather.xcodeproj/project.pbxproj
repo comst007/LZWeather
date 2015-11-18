@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB075DFF1BFB269F00F6069C /* UIView+LZGlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB075DFE1BFB269F00F6069C /* UIView+LZGlowView.m */; };
+		CB075E021BFC74F000F6069C /* LZUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB075E011BFC74F000F6069C /* LZUpdateView.m */; };
 		CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9221BFA145100748C94 /* LZStringPathView.m */; };
 		CB24A9261BFA231B00748C94 /* LZFadeBlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9251BFA231B00748C94 /* LZFadeBlackView.m */; };
 		CB24A9291BFA41F600748C94 /* LZEmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9281BFA41F600748C94 /* LZEmitterLayerView.m */; };
@@ -91,6 +92,8 @@
 /* Begin PBXFileReference section */
 		CB075DFD1BFB269F00F6069C /* UIView+LZGlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LZGlowView.h"; sourceTree = "<group>"; };
 		CB075DFE1BFB269F00F6069C /* UIView+LZGlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LZGlowView.m"; sourceTree = "<group>"; };
+		CB075E001BFC74F000F6069C /* LZUpdateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZUpdateView.h; sourceTree = "<group>"; };
+		CB075E011BFC74F000F6069C /* LZUpdateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZUpdateView.m; sourceTree = "<group>"; };
 		CB24A9211BFA145100748C94 /* LZStringPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStringPathView.h; sourceTree = "<group>"; };
 		CB24A9221BFA145100748C94 /* LZStringPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStringPathView.m; sourceTree = "<group>"; };
 		CB24A9241BFA231B00748C94 /* LZFadeBlackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFadeBlackView.h; sourceTree = "<group>"; };
@@ -587,6 +590,8 @@
 				CB24A9311BFA6D9E00748C94 /* CALayer+LZMaskLayer.m */,
 				CB075DFD1BFB269F00F6069C /* UIView+LZGlowView.h */,
 				CB075DFE1BFB269F00F6069C /* UIView+LZGlowView.m */,
+				CB075E001BFC74F000F6069C /* LZUpdateView.h */,
+				CB075E011BFC74F000F6069C /* LZUpdateView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -733,6 +738,7 @@
 				CB6F51291BF50CBA008F8D89 /* POPCustomAnimation.mm in Sources */,
 				CB7CB7A51BF3CEF2008281DC /* LZForecastRequest.m in Sources */,
 				CB6F50701BF4D089008F8D89 /* LZSys.m in Sources */,
+				CB075E021BFC74F000F6069C /* LZUpdateView.m in Sources */,
 				CB9DD9441BF908540005FE2B /* LZLongpressButton.m in Sources */,
 				CB6F509B1BF50302008F8D89 /* NSString+StringHeight.m in Sources */,
 				CB6F51241BF50CBA008F8D89 /* POPAnimationRuntime.mm in Sources */,
