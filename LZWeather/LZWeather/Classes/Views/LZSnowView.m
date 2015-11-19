@@ -39,6 +39,7 @@
     snowCell.emissionRange = M_PI_2;
     snowCell.spinRange = M_PI_4;
     snowCell.contents = (id)[UIImage imageNamed:@"snow"].CGImage;
+    snowCell.color = self.color == nil ? [UIColor whiteColor].CGColor :self.color.CGColor;
     snowCell.scale = 0.5;
     snowCell.scaleRange = 0.3;
     self.emitterLayer.emitterCells = @[snowCell];

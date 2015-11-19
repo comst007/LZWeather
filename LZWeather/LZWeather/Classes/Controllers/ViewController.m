@@ -21,6 +21,8 @@
 #import "LZRainView.h"
 #import "UIView+LZGlowView.h"
 #import "LZUpdateView.h"
+#import "LZCityView.h"
+#import "LZCommon.h"
 @interface ViewController ()<TWMessageBarStyleSheet>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -29,8 +31,12 @@
 
 @implementation ViewController
 
+- (BOOL)prefersStatusBarHidden{
+    return YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     /*
     NSDictionary *weatherArgDic = @{
@@ -138,13 +144,19 @@
     rainView.backgroundColor = [UIColor redColor];
     [self.view addSubview:rainView];
     [rainView show];
-     */
+     
     
     LZUpdateView *updateView = [[LZUpdateView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     updateView.center = self.view.center;
     updateView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:updateView];
     [updateView show];
+     */
+    LZCityView *view = [[LZCityView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LZHeight - 1.5 * LZWidth)];
+    [view builview];
+    view.weatherNumber = @(600);
+    [self.view addSubview:view];
+    [view show];
 }
 
 @end

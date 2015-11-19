@@ -14,7 +14,7 @@
 @property (nonatomic, assign) CGFloat speed;
 @property (nonatomic, assign) CGFloat speedRange;
 @property (nonatomic, assign) CGFloat gravity;
-
+@property (nonatomic, strong) UIColor *color;
 - (void)showSnow;
 
 
