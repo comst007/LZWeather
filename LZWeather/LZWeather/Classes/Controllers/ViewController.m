@@ -23,6 +23,7 @@
 #import "LZUpdateView.h"
 #import "LZCityView.h"
 #import "LZCommon.h"
+#import "UIView+LZTemperature.h"
 @interface ViewController ()<TWMessageBarStyleSheet>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -151,12 +152,18 @@
     updateView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:updateView];
     [updateView show];
-     */
+     
     LZCityView *view = [[LZCityView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LZHeight - 1.5 * LZWidth)];
     [view builview];
     view.weatherNumber = @(600);
     [self.view addSubview:view];
     [view show];
+     */
+    
+    UILabel *label = [UILabel labelWithTemperature:@"24" tag:1];
+    
+    [self.view addSubview:label];
+    label.center = self.view.center;
 }
 
 @end
