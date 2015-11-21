@@ -24,6 +24,7 @@
 #import "LZCityView.h"
 #import "LZCommon.h"
 #import "UIView+LZTemperature.h"
+#import "LZCircleView.h"
 @interface ViewController ()<TWMessageBarStyleSheet>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -158,12 +159,24 @@
     view.weatherNumber = @(600);
     [self.view addSubview:view];
     [view show];
-     */
+     
     
     UILabel *label = [UILabel labelWithTemperature:@"24" tag:1];
     
     [self.view addSubview:label];
     label.center = self.view.center;
+     */
+    
+    LZCircleView *view = [LZCircleView
+                           defaultCircleView:CGRectMake(0, 0, 100, 100)];
+    view.center = self.view.center;
+    
+    [self.view addSubview: view];
+    [view buildview];
+    
+    [view strokeStart:0.6 animated:YES duration:5];
+    
+    
 }
 
 @end
