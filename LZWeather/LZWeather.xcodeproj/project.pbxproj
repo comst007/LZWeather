@@ -17,6 +17,7 @@
 		CB0D43D31C01FA3D00C3B8B1 /* LZRotateAngleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43D21C01FA3D00C3B8B1 /* LZRotateAngleView.m */; };
 		CB0D43D61C0205D100C3B8B1 /* LZNumberCount.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43D51C0205D100C3B8B1 /* LZNumberCount.m */; };
 		CB0D43D91C020CD200C3B8B1 /* LZHumidityCount.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43D81C020CD200C3B8B1 /* LZHumidityCount.m */; };
+		CB0D43DC1C0211D300C3B8B1 /* LZHumidityCountLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43DB1C0211D300C3B8B1 /* LZHumidityCountLabel.m */; };
 		CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9221BFA145100748C94 /* LZStringPathView.m */; };
 		CB24A9261BFA231B00748C94 /* LZFadeBlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9251BFA231B00748C94 /* LZFadeBlackView.m */; };
 		CB24A9291BFA41F600748C94 /* LZEmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9281BFA41F600748C94 /* LZEmitterLayerView.m */; };
@@ -118,6 +119,8 @@
 		CB0D43D51C0205D100C3B8B1 /* LZNumberCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNumberCount.m; sourceTree = "<group>"; };
 		CB0D43D71C020CD200C3B8B1 /* LZHumidityCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHumidityCount.h; sourceTree = "<group>"; };
 		CB0D43D81C020CD200C3B8B1 /* LZHumidityCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHumidityCount.m; sourceTree = "<group>"; };
+		CB0D43DA1C0211D300C3B8B1 /* LZHumidityCountLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHumidityCountLabel.h; sourceTree = "<group>"; };
+		CB0D43DB1C0211D300C3B8B1 /* LZHumidityCountLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHumidityCountLabel.m; sourceTree = "<group>"; };
 		CB24A9211BFA145100748C94 /* LZStringPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStringPathView.h; sourceTree = "<group>"; };
 		CB24A9221BFA145100748C94 /* LZStringPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStringPathView.m; sourceTree = "<group>"; };
 		CB24A9241BFA231B00748C94 /* LZFadeBlackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFadeBlackView.h; sourceTree = "<group>"; };
@@ -640,6 +643,8 @@
 				CB0D43D51C0205D100C3B8B1 /* LZNumberCount.m */,
 				CB0D43D71C020CD200C3B8B1 /* LZHumidityCount.h */,
 				CB0D43D81C020CD200C3B8B1 /* LZHumidityCount.m */,
+				CB0D43DA1C0211D300C3B8B1 /* LZHumidityCountLabel.h */,
+				CB0D43DB1C0211D300C3B8B1 /* LZHumidityCountLabel.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -824,6 +829,7 @@
 				CB9DD94C1BF9D2030005FE2B /* LZRectsDuringAnimation.m in Sources */,
 				CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */,
 				CB075E091BFC8D2A00F6069C /* WeatherNumberMeaningTransform.m in Sources */,
+				CB0D43DC1C0211D300C3B8B1 /* LZHumidityCountLabel.m in Sources */,
 				CB6F50641BF4CC5E008F8D89 /* LZWeather.m in Sources */,
 				CB24A92C1BFA442800748C94 /* LZSnowView.m in Sources */,
 				CB6F51221BF50CBA008F8D89 /* POPAnimationEvent.mm in Sources */,
