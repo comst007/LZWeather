@@ -14,6 +14,7 @@
 		CB0D43CA1C00611C00C3B8B1 /* UIView+LZTemperature.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43C91C00611C00C3B8B1 /* UIView+LZTemperature.m */; };
 		CB0D43CD1C0065AA00C3B8B1 /* LZCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43CC1C0065AA00C3B8B1 /* LZCircleView.m */; };
 		CB0D43D01C00728400C3B8B1 /* LZTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43CF1C00728400C3B8B1 /* LZTitleLabel.m */; };
+		CB0D43D31C01FA3D00C3B8B1 /* LZRotateAngleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43D21C01FA3D00C3B8B1 /* LZRotateAngleView.m */; };
 		CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9221BFA145100748C94 /* LZStringPathView.m */; };
 		CB24A9261BFA231B00748C94 /* LZFadeBlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9251BFA231B00748C94 /* LZFadeBlackView.m */; };
 		CB24A9291BFA41F600748C94 /* LZEmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9281BFA41F600748C94 /* LZEmitterLayerView.m */; };
@@ -109,6 +110,8 @@
 		CB0D43CC1C0065AA00C3B8B1 /* LZCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCircleView.m; sourceTree = "<group>"; };
 		CB0D43CE1C00728400C3B8B1 /* LZTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTitleLabel.h; sourceTree = "<group>"; };
 		CB0D43CF1C00728400C3B8B1 /* LZTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTitleLabel.m; sourceTree = "<group>"; };
+		CB0D43D11C01FA3D00C3B8B1 /* LZRotateAngleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZRotateAngleView.h; sourceTree = "<group>"; };
+		CB0D43D21C01FA3D00C3B8B1 /* LZRotateAngleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZRotateAngleView.m; sourceTree = "<group>"; };
 		CB24A9211BFA145100748C94 /* LZStringPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStringPathView.h; sourceTree = "<group>"; };
 		CB24A9221BFA145100748C94 /* LZStringPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStringPathView.m; sourceTree = "<group>"; };
 		CB24A9241BFA231B00748C94 /* LZFadeBlackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFadeBlackView.h; sourceTree = "<group>"; };
@@ -625,6 +628,8 @@
 				CB0D43CC1C0065AA00C3B8B1 /* LZCircleView.m */,
 				CB0D43CE1C00728400C3B8B1 /* LZTitleLabel.h */,
 				CB0D43CF1C00728400C3B8B1 /* LZTitleLabel.m */,
+				CB0D43D11C01FA3D00C3B8B1 /* LZRotateAngleView.h */,
+				CB0D43D21C01FA3D00C3B8B1 /* LZRotateAngleView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -761,6 +766,7 @@
 				CB6F51301BF50CBA008F8D89 /* POPVector.mm in Sources */,
 				CB24A9321BFA6D9E00748C94 /* CALayer+LZMaskLayer.m in Sources */,
 				CB6F50761BF4DE62008F8D89 /* LZCity.m in Sources */,
+				CB0D43D31C01FA3D00C3B8B1 /* LZRotateAngleView.m in Sources */,
 				CB6F51231BF50CBA008F8D89 /* POPAnimationExtras.mm in Sources */,
 				CB6F51311BF50CBA008F8D89 /* TransformationMatrix.cpp in Sources */,
 				CB9DD9391BF5D4D60005FE2B /* TWMessageBarManager.m in Sources */,

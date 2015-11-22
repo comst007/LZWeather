@@ -8,9 +8,8 @@
 
 #import "LZCircleView.h"
 #import "YXEasing.h"
-#define  RADIAN(degrees) (M_PI * (degrees)/180.f)
+#import "LZCommon.h"
 
-#define DEGREES(radian) ((radian) * 180.f / M_PI)
 @interface LZCircleView ()
 
 @property (nonatomic, strong) CAShapeLayer *circleLayer;
@@ -42,6 +41,7 @@
 }
 
 - (void)buildview{
+    
     CGFloat lineWidth = self.lineWidth > 0 ? self.lineWidth : 1;
     UIColor *lineColor = self.lineColor != nil? self.lineColor :[UIColor blackColor];
     CGSize size = self.bounds.size;
@@ -71,6 +71,7 @@
 }
 
 - (void)strokeEnd:(CGFloat)percent animated:(BOOL)animated duration:(CGFloat)duration{
+    
     if (percent <= 0) {
         percent = 0;
     }else if (percent >= 1){
@@ -116,6 +117,7 @@
 }
 
 + (instancetype)defaultCircleView:(CGRect)frame{
+    
     LZCircleView *view = [[LZCircleView alloc] initWithFrame:frame];
     view.lineWidth = 2;
     view.lineColor = [UIColor blackColor];

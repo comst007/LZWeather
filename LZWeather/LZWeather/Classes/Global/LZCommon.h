@@ -32,4 +32,8 @@
 #define  iPhone6      (LZWidth == 375.f && LZHeight == 667.f ? YES : NO)
 #define  iPhone6_plus (LZWidth == 414.f && LZHeight == 736.f ? YES : NO)
 
+#define  RADIAN(degrees) (M_PI * (degrees)/180.f)
+
+#define DEGREES(radian) ((radian) * 180.f / M_PI)
+
 #endif
