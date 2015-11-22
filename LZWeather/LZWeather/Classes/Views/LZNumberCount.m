@@ -30,7 +30,7 @@
     
     self.countAnimation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.69 :0.11 :0.32 :0.88];
     
-    if (self.delegate || [self.delegate respondsToSelector:@selector(numberCount:currentNumber:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(numberCount:currentNumber:)]) {
         
         self.countAnimation.property = [POPMutableAnimatableProperty propertyWithName:@"countAnimation" initializer:^(POPMutableAnimatableProperty *prop) {
             prop.writeBlock = ^(id obj, const CGFloat values[]){
