@@ -26,7 +26,10 @@
 #import "UIView+LZTemperature.h"
 #import "LZCircleView.h"
 #import "LZTitleLabel.h"
-@interface ViewController ()<TWMessageBarStyleSheet>
+#import "LZNumberCount.h"
+
+
+@interface ViewController ()<TWMessageBarStyleSheet, LZNumberCountProtocal>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
 @property (nonatomic, strong) LZLabelView *labelview;
@@ -176,14 +179,22 @@
     [view buildview];
     
     [view strokeStart:0.6 animated:YES duration:5];
-     */
+     
     LZTitleLabel *label = [LZTitleLabel titleLabelWithText:@"hello world"];
     
     [self.view addSubview:label];
     label.center = self.view.center;
     [label show];
-    
-    
+    */
+    LZNumberCount *numberCount = [[LZNumberCount alloc] init];
+    numberCount.delegate = self;
+    numberCount.fromeValue = @0;
+    numberCount.toValue = @100;
+    numberCount.duration = @(3.5);
+    [numberCount startAnimation];
 }
 
+- (void)numberCount:(LZNumberCount *)numberCount currentNumber:(NSNumber *)number{
+    NSLog(@"----%@", number);
+}
 @end
