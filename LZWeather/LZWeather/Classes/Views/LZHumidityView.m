@@ -89,6 +89,7 @@
 }
 
 - (void)hide{
+    
     CGFloat duration = 0.75;
     CGFloat circlefullPercent = 0.75;
     
@@ -98,5 +99,6 @@
     [self.showCircle strokeStart:circlefullPercent * [self.percent floatValue] animated:YES duration:duration];
     [self.rotateView rotateAngle:90 animated:YES duration:duration];
     [self.countLabel hideDuration:duration];
+    
 }
 @end
