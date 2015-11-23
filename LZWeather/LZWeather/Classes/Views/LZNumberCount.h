@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "POP.h"
+#import "NSString+RichText.h"
+#import "LZCommon.h"
+#import "AppColor.h"
+#import "LZFont.h"
 
 @class LZNumberCount;
 

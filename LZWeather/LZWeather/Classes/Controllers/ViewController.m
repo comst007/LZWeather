@@ -31,6 +31,7 @@
 #import "LZHumidityView.h"
 #import "LZTemperatureView.h"
 #import "LZWeatherIconView.h"
+#import "LZMaxAndMinTempView.h"
 @interface ViewController ()<TWMessageBarStyleSheet, LZNumberCountProtocal>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -220,12 +221,22 @@
     view.temperature = @(23);
     [view buildView];
     [view show];
-     */
+     
     LZWeatherIconView *view = [[LZWeatherIconView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
     [self.view addSubview:view];
     view.center = self.view.center;
     view.weatherCode = @(300);
     [view builview];
+    [view show];
+     */
+    
+    LZMaxAndMinTempView *view = [[LZMaxAndMinTempView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+    [self.view addSubview: view];
+    view.center = self.view.center;
+    
+    view.minTemp = @20;
+    view.maxTemp = @29;
+    [view buildview];
     [view show];
 }
 
