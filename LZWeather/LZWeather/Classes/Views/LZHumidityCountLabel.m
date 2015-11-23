@@ -62,7 +62,7 @@
     
     [UIView animateWithDuration:duration animations:^{
         self.countLabel.alpha = 0;
-        self.countLabel.transform = CGAffineTransformMake(0.5, 0, 0, 0.5, 0, 0);
+        self.countLabel.transform = CGAffineTransformMake(0.5, 0, 0, 0.5, 0, 0); 
     }];
 }
 @end

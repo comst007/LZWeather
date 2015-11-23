@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LZHumidityCount.m"
+#import "LZHumidityCount.h"
 @interface LZHumidityCountLabel : UIView
 
 @property (nonatomic, strong) NSNumber *fromValue;

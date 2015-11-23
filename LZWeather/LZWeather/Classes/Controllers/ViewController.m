@@ -27,7 +27,7 @@
 #import "LZCircleView.h"
 #import "LZTitleLabel.h"
 #import "LZNumberCount.h"
-
+#import "LZHumidityCountLabel.h"
 
 @interface ViewController ()<TWMessageBarStyleSheet, LZNumberCountProtocal>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
@@ -185,13 +185,21 @@
     [self.view addSubview:label];
     label.center = self.view.center;
     [label show];
-    */
+    
     LZNumberCount *numberCount = [[LZNumberCount alloc] init];
     numberCount.delegate = self;
     numberCount.fromeValue = @0;
     numberCount.toValue = @100;
     numberCount.duration = @(3.5);
     [numberCount startAnimation];
+     */
+    LZHumidityCountLabel *label = [[LZHumidityCountLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [self.view addSubview:label];
+    label.center = self.view.center;
+    label.fromValue = @(0);
+    label.toValue = @(100);
+    
+    [label showDuration:5];
 }
 
 - (void)numberCount:(LZNumberCount *)numberCount currentNumber:(NSNumber *)number{
