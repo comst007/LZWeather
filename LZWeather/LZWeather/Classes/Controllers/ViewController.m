@@ -29,6 +29,7 @@
 #import "LZNumberCount.h"
 #import "LZHumidityCountLabel.h"
 #import "LZHumidityView.h"
+#import "LZTemperatureView.h"
 @interface ViewController ()<TWMessageBarStyleSheet, LZNumberCountProtocal>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -200,13 +201,23 @@
     label.toValue = @(100);
     
     [label showDuration:5];
-     */
+     
     LZHumidityView *view = [[LZHumidityView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
     [self.view addSubview:view];
     
     view.percent = @(0.73);
     view.center = self.view.center;
     [view buildview];
+    [view show];
+     */
+    LZTemperatureView *view = [[LZTemperatureView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+    
+    [self.view addSubview:view];
+    
+    view.center = self.view.center;
+    
+    view.temperature = @(23);
+    [view buildView];
     [view show];
 }
 

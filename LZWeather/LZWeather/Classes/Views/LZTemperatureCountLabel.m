@@ -50,9 +50,11 @@
     [UIView animateWithDuration:duration animations:^{
         self.temperatureLabel.alpha = 1;
     }];
+    
 }
 
 - (void)hideDuration:(CGFloat)duration{
+    
     self.temperatureCount.fromeValue = self.toValue;
     self.temperatureCount.toValue = @(0);
     self.temperatureCount.duration = @(duration);
@@ -61,6 +63,7 @@
     [UIView animateWithDuration:duration animations:^{
         self.temperatureLabel.alpha = 0;
     }];
+    
 }
 
 @end
