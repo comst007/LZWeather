@@ -22,6 +22,7 @@
 		CB0D43E21C0359BD00C3B8B1 /* LZTemperatureCount.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43E11C0359BD00C3B8B1 /* LZTemperatureCount.m */; };
 		CB0D43E51C035EB400C3B8B1 /* LZTemperatureCountLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43E41C035EB400C3B8B1 /* LZTemperatureCountLabel.m */; };
 		CB0D43E81C03633000C3B8B1 /* LZTemperatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43E71C03633000C3B8B1 /* LZTemperatureView.m */; };
+		CB0D43EB1C036AB500C3B8B1 /* LZWeatherIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43EA1C036AB500C3B8B1 /* LZWeatherIconView.m */; };
 		CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9221BFA145100748C94 /* LZStringPathView.m */; };
 		CB24A9261BFA231B00748C94 /* LZFadeBlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9251BFA231B00748C94 /* LZFadeBlackView.m */; };
 		CB24A9291BFA41F600748C94 /* LZEmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9281BFA41F600748C94 /* LZEmitterLayerView.m */; };
@@ -133,6 +134,8 @@
 		CB0D43E41C035EB400C3B8B1 /* LZTemperatureCountLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTemperatureCountLabel.m; sourceTree = "<group>"; };
 		CB0D43E61C03633000C3B8B1 /* LZTemperatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTemperatureView.h; sourceTree = "<group>"; };
 		CB0D43E71C03633000C3B8B1 /* LZTemperatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTemperatureView.m; sourceTree = "<group>"; };
+		CB0D43E91C036AB500C3B8B1 /* LZWeatherIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZWeatherIconView.h; sourceTree = "<group>"; };
+		CB0D43EA1C036AB500C3B8B1 /* LZWeatherIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZWeatherIconView.m; sourceTree = "<group>"; };
 		CB24A9211BFA145100748C94 /* LZStringPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStringPathView.h; sourceTree = "<group>"; };
 		CB24A9221BFA145100748C94 /* LZStringPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStringPathView.m; sourceTree = "<group>"; };
 		CB24A9241BFA231B00748C94 /* LZFadeBlackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFadeBlackView.h; sourceTree = "<group>"; };
@@ -665,6 +668,8 @@
 				CB0D43E41C035EB400C3B8B1 /* LZTemperatureCountLabel.m */,
 				CB0D43E61C03633000C3B8B1 /* LZTemperatureView.h */,
 				CB0D43E71C03633000C3B8B1 /* LZTemperatureView.m */,
+				CB0D43E91C036AB500C3B8B1 /* LZWeatherIconView.h */,
+				CB0D43EA1C036AB500C3B8B1 /* LZWeatherIconView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -852,6 +857,7 @@
 				CB6F507C1BF4E357008F8D89 /* LZListItem.m in Sources */,
 				CB9DD94C1BF9D2030005FE2B /* LZRectsDuringAnimation.m in Sources */,
 				CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */,
+				CB0D43EB1C036AB500C3B8B1 /* LZWeatherIconView.m in Sources */,
 				CB075E091BFC8D2A00F6069C /* WeatherNumberMeaningTransform.m in Sources */,
 				CB0D43DC1C0211D300C3B8B1 /* LZHumidityCountLabel.m in Sources */,
 				CB6F50641BF4CC5E008F8D89 /* LZWeather.m in Sources */,

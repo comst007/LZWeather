@@ -14,4 +14,5 @@
 #define LZFontNameBold  @"Lato-Bold"
 #define LZFontNameRegular @"Lato-Regular"
 #define LZFontNameLight @"Lato-Light"
+#define LZFontNameWeahterAndTime @"Weather&Time"
 #endif
