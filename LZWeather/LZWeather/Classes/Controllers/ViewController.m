@@ -28,7 +28,7 @@
 #import "LZTitleLabel.h"
 #import "LZNumberCount.h"
 #import "LZHumidityCountLabel.h"
-
+#import "LZHumidityView.h"
 @interface ViewController ()<TWMessageBarStyleSheet, LZNumberCountProtocal>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -192,7 +192,7 @@
     numberCount.toValue = @100;
     numberCount.duration = @(3.5);
     [numberCount startAnimation];
-     */
+     
     LZHumidityCountLabel *label = [[LZHumidityCountLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     [self.view addSubview:label];
     label.center = self.view.center;
@@ -200,6 +200,14 @@
     label.toValue = @(100);
     
     [label showDuration:5];
+     */
+    LZHumidityView *view = [[LZHumidityView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+    [self.view addSubview:view];
+    
+    view.percent = @(0.73);
+    view.center = self.view.center;
+    [view buildview];
+    [view show];
 }
 
 - (void)numberCount:(LZNumberCount *)numberCount currentNumber:(NSNumber *)number{
