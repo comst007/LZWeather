@@ -30,6 +30,10 @@
 		CB0D43FA1C03AF3000C3B8B1 /* LZAlphaView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43F91C03AF3000C3B8B1 /* LZAlphaView.m */; };
 		CB0D43FD1C03B28700C3B8B1 /* LZGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43FC1C03B28700C3B8B1 /* LZGridView.m */; };
 		CB0D44001C03B72B00C3B8B1 /* LZMaxAndMinTempView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D43FF1C03B72B00C3B8B1 /* LZMaxAndMinTempView.m */; };
+		CB0D44031C04C70600C3B8B1 /* LZSun.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D44021C04C70600C3B8B1 /* LZSun.m */; };
+		CB0D44061C04C9AE00C3B8B1 /* LZSunRiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D44051C04C9AE00C3B8B1 /* LZSunRiseView.m */; };
+		CB0D44091C04D02600C3B8B1 /* LZSunSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D44081C04D02600C3B8B1 /* LZSunSetView.m */; };
+		CB0D440C1C04D37200C3B8B1 /* LZSunInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D440B1C04D37200C3B8B1 /* LZSunInfoView.m */; };
 		CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9221BFA145100748C94 /* LZStringPathView.m */; };
 		CB24A9261BFA231B00748C94 /* LZFadeBlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9251BFA231B00748C94 /* LZFadeBlackView.m */; };
 		CB24A9291BFA41F600748C94 /* LZEmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9281BFA41F600748C94 /* LZEmitterLayerView.m */; };
@@ -157,6 +161,14 @@
 		CB0D43FC1C03B28700C3B8B1 /* LZGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZGridView.m; sourceTree = "<group>"; };
 		CB0D43FE1C03B72B00C3B8B1 /* LZMaxAndMinTempView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMaxAndMinTempView.h; sourceTree = "<group>"; };
 		CB0D43FF1C03B72B00C3B8B1 /* LZMaxAndMinTempView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMaxAndMinTempView.m; sourceTree = "<group>"; };
+		CB0D44011C04C70600C3B8B1 /* LZSun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSun.h; sourceTree = "<group>"; };
+		CB0D44021C04C70600C3B8B1 /* LZSun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSun.m; sourceTree = "<group>"; };
+		CB0D44041C04C9AE00C3B8B1 /* LZSunRiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSunRiseView.h; sourceTree = "<group>"; };
+		CB0D44051C04C9AE00C3B8B1 /* LZSunRiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSunRiseView.m; sourceTree = "<group>"; };
+		CB0D44071C04D02600C3B8B1 /* LZSunSetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSunSetView.h; sourceTree = "<group>"; };
+		CB0D44081C04D02600C3B8B1 /* LZSunSetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSunSetView.m; sourceTree = "<group>"; };
+		CB0D440A1C04D37200C3B8B1 /* LZSunInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSunInfoView.h; sourceTree = "<group>"; };
+		CB0D440B1C04D37200C3B8B1 /* LZSunInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSunInfoView.m; sourceTree = "<group>"; };
 		CB24A9211BFA145100748C94 /* LZStringPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStringPathView.h; sourceTree = "<group>"; };
 		CB24A9221BFA145100748C94 /* LZStringPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStringPathView.m; sourceTree = "<group>"; };
 		CB24A9241BFA231B00748C94 /* LZFadeBlackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFadeBlackView.h; sourceTree = "<group>"; };
@@ -705,6 +717,14 @@
 				CB0D43FC1C03B28700C3B8B1 /* LZGridView.m */,
 				CB0D43FE1C03B72B00C3B8B1 /* LZMaxAndMinTempView.h */,
 				CB0D43FF1C03B72B00C3B8B1 /* LZMaxAndMinTempView.m */,
+				CB0D44011C04C70600C3B8B1 /* LZSun.h */,
+				CB0D44021C04C70600C3B8B1 /* LZSun.m */,
+				CB0D44041C04C9AE00C3B8B1 /* LZSunRiseView.h */,
+				CB0D44051C04C9AE00C3B8B1 /* LZSunRiseView.m */,
+				CB0D44071C04D02600C3B8B1 /* LZSunSetView.h */,
+				CB0D44081C04D02600C3B8B1 /* LZSunSetView.m */,
+				CB0D440A1C04D37200C3B8B1 /* LZSunInfoView.h */,
+				CB0D440B1C04D37200C3B8B1 /* LZSunInfoView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -836,6 +856,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0D44061C04C9AE00C3B8B1 /* LZSunRiseView.m in Sources */,
 				CB0D43F11C03995F00C3B8B1 /* LZMinTempCount.m in Sources */,
 				CB6F50671BF4CF19008F8D89 /* LZMain.m in Sources */,
 				CB6F506A1BF4CFDE008F8D89 /* LZWind.m in Sources */,
@@ -882,6 +903,7 @@
 				CB0D43D91C020CD200C3B8B1 /* LZHumidityCount.m in Sources */,
 				CB6F50611BF4CBF1008F8D89 /* LZCoord.m in Sources */,
 				CB6F513A1BF50FA8008F8D89 /* YXEasing.m in Sources */,
+				CB0D44031C04C70600C3B8B1 /* LZSun.m in Sources */,
 				CB6F512C1BF50CBA008F8D89 /* POPLayerExtras.mm in Sources */,
 				CB0D43F71C039BDC00C3B8B1 /* LZMinTempCountLabel.m in Sources */,
 				CB6F51391BF50FA8008F8D89 /* Easing.c in Sources */,
@@ -894,6 +916,8 @@
 				CB0D43CD1C0065AA00C3B8B1 /* LZCircleView.m in Sources */,
 				CB6F50971BF501D6008F8D89 /* UIView+SetRect.m in Sources */,
 				CB6F51251BF50CBA008F8D89 /* POPAnimationTracer.mm in Sources */,
+				CB0D44091C04D02600C3B8B1 /* LZSunSetView.m in Sources */,
+				CB0D440C1C04D37200C3B8B1 /* LZSunInfoView.m in Sources */,
 				CB6F507C1BF4E357008F8D89 /* LZListItem.m in Sources */,
 				CB9DD94C1BF9D2030005FE2B /* LZRectsDuringAnimation.m in Sources */,
 				CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */,
