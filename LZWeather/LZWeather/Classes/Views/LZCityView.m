@@ -262,6 +262,7 @@
 }
 
 - (void)hide{
+    [self.weatherView hide];
     [UIView animateWithDuration:0.75 animations:^{
         self.stationLabel.alpha = 0;
         self.stationLabel.frame = self.stationRect.endRect;

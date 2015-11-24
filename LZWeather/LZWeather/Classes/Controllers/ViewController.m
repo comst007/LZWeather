@@ -33,6 +33,7 @@
 #import "LZWeatherIconView.h"
 #import "LZMaxAndMinTempView.h"
 #import "LZSunInfoView.h"
+#import "LZWindSpeedView.h"
 @interface ViewController ()<TWMessageBarStyleSheet, LZNumberCountProtocal>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -161,94 +162,74 @@
     updateView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:updateView];
     [updateView show];
-     
+     */
     LZCityView *view = [[LZCityView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LZHeight - 1.5 * LZWidth)];
     [view builview];
     view.weatherNumber = @(600);
     [self.view addSubview:view];
     [view show];
      
-    
-    UILabel *label = [UILabel labelWithTemperature:@"24" tag:1];
-    
-    [self.view addSubview:label];
-    label.center = self.view.center;
      
-    
-    LZCircleView *view = [LZCircleView
-                           defaultCircleView:CGRectMake(0, 0, 100, 100)];
-    view.center = self.view.center;
-    
-    [self.view addSubview: view];
-    [view buildview];
-    
-    [view strokeStart:0.6 animated:YES duration:5];
      
-    LZTitleLabel *label = [LZTitleLabel titleLabelWithText:@"hello world"];
+//    LZHumidityView *view = [[LZHumidityView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+//    [self.view addSubview:view];
+//    
+//    view.percent = @(0.73);
+//    view.center = self.view.center;
+//    [view buildview];
+//    [view show];
     
-    [self.view addSubview:label];
-    label.center = self.view.center;
-    [label show];
-    
-    LZNumberCount *numberCount = [[LZNumberCount alloc] init];
-    numberCount.delegate = self;
-    numberCount.fromeValue = @0;
-    numberCount.toValue = @100;
-    numberCount.duration = @(3.5);
-    [numberCount startAnimation];
      
-    LZHumidityCountLabel *label = [[LZHumidityCountLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    [self.view addSubview:label];
-    label.center = self.view.center;
-    label.fromValue = @(0);
-    label.toValue = @(100);
-    
-    [label showDuration:5];
      
-    LZHumidityView *view = [[LZHumidityView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
-    [self.view addSubview:view];
+//    LZTemperatureView *view = [[LZTemperatureView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+//    
+//    [self.view addSubview:view];
+//    
+//    view.center = self.view.center;
+//    
+//    view.temperature = @(23);
+//    [view buildView];
+//    [view show];
     
-    view.percent = @(0.73);
-    view.center = self.view.center;
-    [view buildview];
-    [view show];
-     
-    LZTemperatureView *view = [[LZTemperatureView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+//     
+//    LZWeatherIconView *view = [[LZWeatherIconView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+//    [self.view addSubview:view];
+//    view.center = self.view.center;
+//    view.weatherCode = @(300);
+//    [view builview];
+//    [view show];
+//     
     
-    [self.view addSubview:view];
+//    LZMaxAndMinTempView *view = [[LZMaxAndMinTempView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+//    [self.view addSubview: view];
+//    view.center = self.view.center;
+//    
+//    view.minTemp = @20;
+//    view.maxTemp = @29;
+//    [view buildview];
+//    [view show];
     
-    view.center = self.view.center;
     
-    view.temperature = @(23);
-    [view buildView];
-    [view show];
-     
-    LZWeatherIconView *view = [[LZWeatherIconView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
-    [self.view addSubview:view];
-    view.center = self.view.center;
-    view.weatherCode = @(300);
-    [view builview];
-    [view show];
-     
+//    LZSunInfoView *view = [[LZSunInfoView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+//    
+//    [self.view addSubview: view];
+//    view.center = self.view.center;
+//    view.sunRiseSeconds = @(123456);
+//    view.sunSetSeconds = @(45678899);
+//    [view buildview];
+//    [view show];
     
-    LZMaxAndMinTempView *view = [[LZMaxAndMinTempView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
-    [self.view addSubview: view];
-    view.center = self.view.center;
     
-    view.minTemp = @20;
-    view.maxTemp = @29;
-    [view buildview];
-    [view show];
-     */
+//    LZWindSpeedView *view = [[LZWindSpeedView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
+//    [self.view addSubview:view];
+//    
+//    view.center = self.view.center;
+//    view.windSpeed = @6;
+//    view.circlePerSecond = @(1);
+//    [view buildview];
+//    [view show];
+    [view performSelector:@selector(hide) withObject:nil afterDelay:3];
     
-    LZSunInfoView *view = [[LZSunInfoView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
-    
-    [self.view addSubview: view];
-    view.center = self.view.center;
-    view.sunRiseSeconds = @(123456);
-    view.sunSetSeconds = @(45678899);
-    [view buildview];
-    [view show];
 }
 
 - (void)numberCount:(LZNumberCount *)numberCount currentNumber:(NSNumber *)number{

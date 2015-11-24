@@ -190,7 +190,7 @@
 - (void)hide{
     
     CGFloat duration = 0.75;
-    
+    [self.gridView hideDuration:duration];
     [UIView animateWithDuration:duration animations:^{
         self.centerlineView.alpha = 0;
         self.minTempView.frame = self.minTempViewRect.startRect;
