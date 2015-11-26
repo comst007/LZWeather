@@ -150,20 +150,21 @@
     if (self.weatherInfo == nil) {
         return;
     }
-    self.humidityView.percent = @(self.weatherInfo.weatherMain.humidity.integerValue / 100);
+    self.humidityView.percent = @(self.weatherInfo.weatherMain.humidity.integerValue / 100.0);
     self.windSpeedView.windSpeed = self.weatherInfo.wind.speed;
     self.windSpeedView.circlePerSecond = @(self.windSpeedView.windSpeed.floatValue / 5);
     
     self.maxAndMinTemperatureView.maxTemp = @(self.weatherInfo.weatherMain.temp_max.floatValue - 273.15) ;
     self.maxAndMinTemperatureView.minTemp = @(self.weatherInfo.weatherMain.temp_min.floatValue - 273.15) ;
     
+    //id temp = self.weatherInfo.weatherMain;
     self.sunInfoView.sunRiseSeconds = self.weatherInfo.sys.sunrise;
     self.sunInfoView.sunSetSeconds = self.weatherInfo.sys.sunset;
     
     self.temperatureView.temperature = @(self.weatherInfo.weatherMain.temp.floatValue - 273.15);
     
     self.cityView.cityName = self.weatherInfo.cityName;
-    self.cityView.weatherDescription = self.weatherInfo.weather.description;
+    self.cityView.weatherDescription = self.weatherInfo.weather.desc;
     self.cityView.baseStation = self.weatherInfo.base;
     self.cityView.secondsSince1970 = self.weatherInfo.dt;
     self.cityView.weatherNumber = self.weatherInfo.weather.weatherID;

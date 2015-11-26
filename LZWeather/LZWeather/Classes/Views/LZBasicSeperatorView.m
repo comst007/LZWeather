@@ -14,7 +14,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        self.maxAlpha = 1.0;
+        self.maxAlpha = 0.1;
         self.showDuration = 1.75;
         self.hideDuration = 0.75;
         self.alpha = 0;

@@ -32,7 +32,7 @@
     CGFloat lineWidth = self.textWidth > 0 ? self.textWidth : 0.5;
     //UIColor *textColor = self.textColor ? self.textColor : [UIColor blackColor];
     
-    self.shapeLayer.path = [UIBezierPath pathForMultilineString:self.text withFont:font maxWidth:lineWidth textAlignment:NSTextAlignmentCenter].CGPath;
+    self.shapeLayer.path = [UIBezierPath pathForMultilineString:self.text withFont:font maxWidth:self.bounds.size.width textAlignment:NSTextAlignmentCenter].CGPath;
     self.shapeLayer.bounds = CGPathGetBoundingBox(self.shapeLayer.path);
     self.shapeLayer.geometryFlipped = YES;
     
