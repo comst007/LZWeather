@@ -5,7 +5,7 @@
 //  Created by comst on 15/11/12.
 //  Copyright (c) 2015年 com.comst1314. All rights reserved.
 //
-
+#import "LZGlobal.h"
 #import "ViewController.h"
 #import "LZWeatherRequest.h"
 #import "LZForecastRequest.h"
@@ -34,10 +34,12 @@
 #import "LZMaxAndMinTempView.h"
 #import "LZSunInfoView.h"
 #import "LZWindSpeedView.h"
+#import "LZWeatherInfoView.h"
 @interface ViewController ()<TWMessageBarStyleSheet, LZNumberCountProtocal>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
 @property (nonatomic, strong) LZLabelView *labelview;
+@property (nonatomic, strong) LZWeatherInfoView *weatherInfoView;
 @end
 
 @implementation ViewController
@@ -47,9 +49,14 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    LZWeatherInfoView *view = [[LZWeatherInfoView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:view];
+    [view buildview];
+    self.weatherInfoView = view;
     
     // Do any additional setup after loading the view, typically from a nib.
-    /*
+    
+     __weak typeof(self) weakSelf = self;
     NSDictionary *weatherArgDic = @{
                              @"apiKey":@"8781e4ef1c73ff20a180d3d7a42a8c04",
                              @"latitude":@"22.673309",
@@ -57,7 +64,12 @@
                              };
     LZWeatherRequest *request = [[LZWeatherRequest alloc] init];
     [request weatherRequestWithArgDic:weatherArgDic completionHandler:^(LZWeatherRequest *request) {
-        NSLog(@"over.....");
+        weakSelf.weatherInfoView.weatherInfo = [LZGlobal sharedGlobal].weatherInfo;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [weakSelf.weatherInfoView show];
+            
+        });
     }];
     self.weatherRequest = request;
     
@@ -76,6 +88,7 @@
     }];
      
     
+     /*
     TWMessageBarManager *barManager = [[TWMessageBarManager alloc] init];
     [barManager showMessageWithTitle:@"can not get location" description:@"hello  world" type:TWMessageBarMessageTypeError duration:2];
      
