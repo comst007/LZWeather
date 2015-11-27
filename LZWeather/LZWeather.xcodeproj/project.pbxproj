@@ -45,6 +45,9 @@
 		CB0D44321C078E1400C3B8B1 /* LZPathDirectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D44311C078E1400C3B8B1 /* LZPathDirectionView.m */; };
 		CB0D44351C0792C900C3B8B1 /* LZShowDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D44341C0792C900C3B8B1 /* LZShowDownView.m */; };
 		CB0D44391C07949300C3B8B1 /* LZWeatherInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D44381C07949300C3B8B1 /* LZWeatherInfoView.m */; };
+		CB0D443C1C07D9DE00C3B8B1 /* LZForecastCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D443B1C07D9DE00C3B8B1 /* LZForecastCell.m */; };
+		CB0D44401C07EE3000C3B8B1 /* LZForecastController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D443F1C07EE3000C3B8B1 /* LZForecastController.m */; };
+		CB0D44441C07EED000C3B8B1 /* LZForecastWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0D44431C07EED000C3B8B1 /* LZForecastWeatherView.m */; };
 		CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9221BFA145100748C94 /* LZStringPathView.m */; };
 		CB24A9261BFA231B00748C94 /* LZFadeBlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9251BFA231B00748C94 /* LZFadeBlackView.m */; };
 		CB24A9291BFA41F600748C94 /* LZEmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB24A9281BFA41F600748C94 /* LZEmitterLayerView.m */; };
@@ -202,6 +205,12 @@
 		CB0D44341C0792C900C3B8B1 /* LZShowDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZShowDownView.m; sourceTree = "<group>"; };
 		CB0D44371C07949300C3B8B1 /* LZWeatherInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZWeatherInfoView.h; sourceTree = "<group>"; };
 		CB0D44381C07949300C3B8B1 /* LZWeatherInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZWeatherInfoView.m; sourceTree = "<group>"; };
+		CB0D443A1C07D9DE00C3B8B1 /* LZForecastCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZForecastCell.h; sourceTree = "<group>"; };
+		CB0D443B1C07D9DE00C3B8B1 /* LZForecastCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZForecastCell.m; sourceTree = "<group>"; };
+		CB0D443E1C07EE3000C3B8B1 /* LZForecastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZForecastController.h; sourceTree = "<group>"; };
+		CB0D443F1C07EE3000C3B8B1 /* LZForecastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZForecastController.m; sourceTree = "<group>"; };
+		CB0D44421C07EED000C3B8B1 /* LZForecastWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZForecastWeatherView.h; sourceTree = "<group>"; };
+		CB0D44431C07EED000C3B8B1 /* LZForecastWeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZForecastWeatherView.m; sourceTree = "<group>"; };
 		CB24A9211BFA145100748C94 /* LZStringPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZStringPathView.h; sourceTree = "<group>"; };
 		CB24A9221BFA145100748C94 /* LZStringPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZStringPathView.m; sourceTree = "<group>"; };
 		CB24A9241BFA231B00748C94 /* LZFadeBlackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFadeBlackView.h; sourceTree = "<group>"; };
@@ -546,6 +555,24 @@
 			name = WeatherMainView;
 			sourceTree = "<group>";
 		};
+		CB0D443D1C07DA2100C3B8B1 /* WeatherForecastCell */ = {
+			isa = PBXGroup;
+			children = (
+				CB0D443A1C07D9DE00C3B8B1 /* LZForecastCell.h */,
+				CB0D443B1C07D9DE00C3B8B1 /* LZForecastCell.m */,
+			);
+			name = WeatherForecastCell;
+			sourceTree = "<group>";
+		};
+		CB0D44411C07EEA700C3B8B1 /* ForecastWeatherView */ = {
+			isa = PBXGroup;
+			children = (
+				CB0D44421C07EED000C3B8B1 /* LZForecastWeatherView.h */,
+				CB0D44431C07EED000C3B8B1 /* LZForecastWeatherView.m */,
+			);
+			name = ForecastWeatherView;
+			sourceTree = "<group>";
+		};
 		CB6F50801BF4FB5F008F8D89 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -763,6 +790,8 @@
 			children = (
 				CB7CB7811BF3C8AB008281DC /* ViewController.h */,
 				CB7CB7821BF3C8AB008281DC /* ViewController.m */,
+				CB0D443E1C07EE3000C3B8B1 /* LZForecastController.h */,
+				CB0D443F1C07EE3000C3B8B1 /* LZForecastController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -850,6 +879,8 @@
 		CB7CB7891BF3C8AB008281DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB0D44411C07EEA700C3B8B1 /* ForecastWeatherView */,
+				CB0D443D1C07DA2100C3B8B1 /* WeatherForecastCell */,
 				CB0D44361C07946800C3B8B1 /* WeatherMainView */,
 				CB0D442F1C078DFA00C3B8B1 /* ShowDownView */,
 				CB0D44251C07866500C3B8B1 /* LineSeperatorView */,
@@ -1025,6 +1056,7 @@
 				CB6F51281BF50CBA008F8D89 /* POPCGUtils.mm in Sources */,
 				CB6F51481BF51187008F8D89 /* UIBezierPath+TextPaths.m in Sources */,
 				CB0D43E21C0359BD00C3B8B1 /* LZTemperatureCount.m in Sources */,
+				CB0D44401C07EE3000C3B8B1 /* LZForecastController.m in Sources */,
 				CB6F51291BF50CBA008F8D89 /* POPCustomAnimation.mm in Sources */,
 				CB0D43E81C03633000C3B8B1 /* LZTemperatureView.m in Sources */,
 				CB7CB7A51BF3CEF2008281DC /* LZForecastRequest.m in Sources */,
@@ -1088,6 +1120,7 @@
 				CB24A92C1BFA442800748C94 /* LZSnowView.m in Sources */,
 				CB0D44281C07869A00C3B8B1 /* LZBasicSeperatorView.m in Sources */,
 				CB6F51221BF50CBA008F8D89 /* POPAnimationEvent.mm in Sources */,
+				CB0D44441C07EED000C3B8B1 /* LZForecastWeatherView.m in Sources */,
 				CB6F50731BF4D1B7008F8D89 /* LZWeatherInfo.m in Sources */,
 				CB0D43F41C0399A300C3B8B1 /* LZMaxTempCountLabel.m in Sources */,
 				CB6F506D1BF4D064008F8D89 /* LZClouds.m in Sources */,
@@ -1100,6 +1133,7 @@
 				CB6F51211BF50CBA008F8D89 /* POPAnimation.mm in Sources */,
 				CB6F51471BF51187008F8D89 /* ARCGPathFromString.m in Sources */,
 				CB7CB7931BF3C8AB008281DC /* AppDelegate.m in Sources */,
+				CB0D443C1C07D9DE00C3B8B1 /* LZForecastCell.m in Sources */,
 				CB24A92F1BFA60DB00748C94 /* LZRainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

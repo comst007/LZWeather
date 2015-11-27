@@ -35,6 +35,7 @@
 #import "LZSunInfoView.h"
 #import "LZWindSpeedView.h"
 #import "LZWeatherInfoView.h"
+#import "LZForecastController.h"
 @interface ViewController ()<TWMessageBarStyleSheet, LZNumberCountProtocal>
 @property (nonatomic, strong) LZWeatherRequest *weatherRequest;
 @property (nonatomic, strong) LZForecastRequest *forecastRequest;
@@ -49,10 +50,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LZWeatherInfoView *view = [[LZWeatherInfoView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:view];
-    [view buildview];
-    self.weatherInfoView = view;
+    
+//    LZWeatherInfoView *view = [[LZWeatherInfoView alloc] initWithFrame:self.view.bounds];
+//    [self.view addSubview:view];
+//    [view buildview];
+//    self.weatherInfoView = view;
     
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -64,12 +66,13 @@
                              };
     LZWeatherRequest *request = [[LZWeatherRequest alloc] init];
     [request weatherRequestWithArgDic:weatherArgDic completionHandler:^(LZWeatherRequest *request) {
-        weakSelf.weatherInfoView.weatherInfo = [LZGlobal sharedGlobal].weatherInfo;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            [weakSelf.weatherInfoView show];
-            
-        });
+//        
+//        weakSelf.weatherInfoView.weatherInfo = [LZGlobal sharedGlobal].weatherInfo;
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//            [weakSelf.weatherInfoView show];
+//            
+//        });
     }];
     self.weatherRequest = request;
     
@@ -146,6 +149,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
 
+    NSLog(@"touc");
     /*
     self.labelview = [LZLabelView labelWithText:@"长按刷新" origin:CGPointMake(100, 100)];
     [self.view addSubview:self.labelview];
@@ -176,12 +180,14 @@
     [self.view addSubview:updateView];
     [updateView show];
      */
-    LZCityView *view = [[LZCityView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LZHeight - 1.5 * LZWidth)];
-    [view builview];
-    view.weatherNumber = @(600);
-    [self.view addSubview:view];
-    [view show];
-     
+    
+    
+//    LZCityView *view = [[LZCityView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LZHeight - 1.5 * LZWidth)];
+//    [view builview];
+//    view.weatherNumber = @(600);
+//    [self.view addSubview:view];
+//    [view show];
+    
      
      
 //    LZHumidityView *view = [[LZHumidityView alloc] initWithFrame:CGRectMake(0, 0, self.view.width * 0.5, self.view.width * 0.5)];
@@ -241,7 +247,12 @@
 //    view.circlePerSecond = @(1);
 //    [view buildview];
 //    [view show];
-    [view performSelector:@selector(hide) withObject:nil afterDelay:3];
+//    [view performSelector:@selector(hide) withObject:nil afterDelay:3];
+    
+    LZForecastController *forecastVC = [[LZForecastController alloc] init];
+    forecastVC.forecastInfo = [LZGlobal sharedGlobal].forecastInfo;
+    
+    [self presentViewController:forecastVC animated:YES completion:nil];
     
 }
 
