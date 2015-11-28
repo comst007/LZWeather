@@ -84,7 +84,7 @@
 //    NSLog(@"%@", NSStringFromCGRect([self.showView.layer.presentationLayer bounds]));
     [self.showView.layer removeAllAnimations];
     
-    [UIView animateWithDuration:self.animationTime animations:^{
+    [UIView animateWithDuration:self.animationTime <= 0 ? 5 : self.animationTime animations:^{
        
         self.highlightLabel.alpha = 1.0;
         self.normalLabel.alpha = 0.0;
@@ -92,8 +92,11 @@
         self.showView.bounds = CGRectMake(0, 0, self.showView.width, self.animationWidth);
         self.showView.alpha = 1.0;
     } completion:^(BOOL finished) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(longpressButtonDidFinish:)] ) {
-            [self.delegate longpressButtonDidFinish:self];
+        if (finished) {
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(longpressButtonDidFinish:)] ) {
+                [self.delegate longpressButtonDidFinish:self];
+            }
         }
     }];
 }
@@ -109,7 +112,7 @@
     [self.showView.layer removeAllAnimations];
 //
     
-    [UIView animateWithDuration:self.normalTime animations:^{
+    [UIView animateWithDuration:self.normalTime <= 0 ? 0.5 : self.normalTime animations:^{
         
         self.normalLabel.alpha = 1.0;
         self.highlightLabel.alpha = 0.0;

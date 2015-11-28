@@ -83,6 +83,7 @@
 
 - (void)buildBackview{
     self.backview = [LZLineBakgroundView linebackgroundViewWithWith:4 lineGap:4 lineColor:[UIColor blackColor] frame:self.bounds];
+    self.backview.alpha = 0;
     [self addSubview:self.backview];
 }
 
@@ -92,7 +93,7 @@
         self.iconview.alpha = 0.0;
         self.pressbutton.frame = self.pressButtonRects.endRect;
         self.pressbutton.alpha = 0.0;
-        
+        self.backview.alpha = 0;
     } completion:^(BOOL finished) {
         self.iconview.frame = self.imageviewRects.startRect;
         self.pressbutton.frame = self.pressButtonRects.startRect;
@@ -107,7 +108,7 @@
         
         self.iconview.alpha = 1.0;
         self.pressbutton.alpha = 1.0;
-        
+        self.backview.alpha = 1;
     } completion:^(BOOL finished) {
         
         

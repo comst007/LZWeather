@@ -27,7 +27,8 @@
     self = [super initWithFrame:CGRectMake(0, 0, LZWidth * 0.5 , LZWidth * 0.5 + LabelHeight)];
     
     if (self) {
-        self.backgroundColor = [UIColor blackColor];
+        self.alpha = 0;
+        //self.backgroundColor = [UIColor blackColor];
         self.userInteractionEnabled = NO;
         [self initLabel];
         [self initSnowview];
@@ -89,10 +90,12 @@
 - (void)show{
     
     [UIView animateWithDuration:1.0 animations:^{
-        
-        self.snowView.alpha = 1.0;
+        self.alpha = 0.75;
+        self.snowView.alpha = 0.75;
+       
         self.updatingLabel.frame = self.updatingRect.midRect;
-        self.updatingLabel.alpha = 1.0;
+        self.updatingLabel.alpha = 0.75;
+        
         
     } completion:^(BOOL finished) {
         
@@ -101,6 +104,7 @@
 
 - (void)showFailed{
     [UIView animateWithDuration:1 animations:^{
+        self.alpha = 1;
         self.updatingLabel.frame = self.updatingRect.endRect;
         self.updatingLabel.alpha = 0;
         
@@ -115,7 +119,7 @@
     
     [UIView animateWithDuration:0.75 animations:^{
         self.snowView.alpha = 0;
-        
+        self.alpha = 0;
         self.updatingLabel.frame = self.updatingRect.endRect;
         self.updatingLabel.alpha = 0;
         

@@ -8,16 +8,26 @@
 
 #import "AppDelegate.h"
 
+#import "ViewController.h"
+#import "LZViewController.h"
+#import "LZWeatherMainController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (void)loadMainFrame{
+    LZWeatherMainController *VC = [[LZWeatherMainController alloc] init];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = VC;
+    [self.window makeKeyAndVisible];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-   
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self loadMainFrame];
     return YES;
 }
 

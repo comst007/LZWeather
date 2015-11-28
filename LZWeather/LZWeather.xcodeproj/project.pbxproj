@@ -107,12 +107,14 @@
 		CB7CB79C1BF3C98E008281DC /* LZGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7CB79B1BF3C98E008281DC /* LZGlobal.m */; };
 		CB7CB79F1BF3CA07008281DC /* LZWeatherRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7CB79E1BF3CA07008281DC /* LZWeatherRequest.m */; };
 		CB7CB7A51BF3CEF2008281DC /* LZForecastRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7CB7A41BF3CEF2008281DC /* LZForecastRequest.m */; };
+		CB9906101C09036100CCF818 /* LZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB99060F1C09036100CCF818 /* LZLocationManager.m */; };
+		CB9906131C093FA700CCF818 /* LZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9906121C093FA700CCF818 /* LZViewController.m */; };
+		CB9906161C094BC700CCF818 /* LZWeatherMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9906151C094BC700CCF818 /* LZWeatherMainController.m */; };
 		CB9DD9391BF5D4D60005FE2B /* TWMessageBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD9381BF5D4D60005FE2B /* TWMessageBarManager.m */; };
 		CB9DD93C1BF5D9550005FE2B /* LZLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD93B1BF5D9550005FE2B /* LZLabelView.m */; };
 		CB9DD93F1BF727340005FE2B /* LZLineBakgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD93E1BF727340005FE2B /* LZLineBakgroundView.m */; };
 		CB9DD9411BF72C3A0005FE2B /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9DD9401BF72C3A0005FE2B /* Reveal.framework */; };
 		CB9DD9441BF908540005FE2B /* LZLongpressButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD9431BF908540005FE2B /* LZLongpressButton.m */; };
-		CB9DD9451BF91E400005FE2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7CB78D1BF3C8AB008281DC /* Main.storyboard */; };
 		CB9DD9461BF91E490005FE2B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7CB78B1BF3C8AB008281DC /* LaunchScreen.xib */; };
 		CB9DD9491BF9CF320005FE2B /* LZLoadview.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD9481BF9CF320005FE2B /* LZLoadview.m */; };
 		CB9DD94C1BF9D2030005FE2B /* LZRectsDuringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD94B1BF9D2030005FE2B /* LZRectsDuringAnimation.m */; };
@@ -333,7 +335,6 @@
 		CB7CB7811BF3C8AB008281DC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CB7CB7821BF3C8AB008281DC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CB7CB78C1BF3C8AB008281DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CB7CB78E1BF3C8AB008281DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB7CB78F1BF3C8AB008281DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CB7CB7911BF3C8AB008281DC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7CB7921BF3C8AB008281DC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -343,6 +344,12 @@
 		CB7CB79E1BF3CA07008281DC /* LZWeatherRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZWeatherRequest.m; sourceTree = "<group>"; };
 		CB7CB7A31BF3CEF2008281DC /* LZForecastRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZForecastRequest.h; sourceTree = "<group>"; };
 		CB7CB7A41BF3CEF2008281DC /* LZForecastRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZForecastRequest.m; sourceTree = "<group>"; };
+		CB99060E1C09036100CCF818 /* LZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLocationManager.h; sourceTree = "<group>"; };
+		CB99060F1C09036100CCF818 /* LZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLocationManager.m; sourceTree = "<group>"; };
+		CB9906111C093FA700CCF818 /* LZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZViewController.h; sourceTree = "<group>"; };
+		CB9906121C093FA700CCF818 /* LZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZViewController.m; sourceTree = "<group>"; };
+		CB9906141C094BC700CCF818 /* LZWeatherMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZWeatherMainController.h; sourceTree = "<group>"; };
+		CB9906151C094BC700CCF818 /* LZWeatherMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZWeatherMainController.m; sourceTree = "<group>"; };
 		CB9DD9371BF5D4D60005FE2B /* TWMessageBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMessageBarManager.h; sourceTree = "<group>"; };
 		CB9DD9381BF5D4D60005FE2B /* TWMessageBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMessageBarManager.m; sourceTree = "<group>"; };
 		CB9DD93A1BF5D9550005FE2B /* LZLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLabelView.h; sourceTree = "<group>"; };
@@ -792,6 +799,10 @@
 				CB7CB7821BF3C8AB008281DC /* ViewController.m */,
 				CB0D443E1C07EE3000C3B8B1 /* LZForecastController.h */,
 				CB0D443F1C07EE3000C3B8B1 /* LZForecastController.m */,
+				CB9906111C093FA700CCF818 /* LZViewController.h */,
+				CB9906121C093FA700CCF818 /* LZViewController.m */,
+				CB9906141C094BC700CCF818 /* LZWeatherMainController.h */,
+				CB9906151C094BC700CCF818 /* LZWeatherMainController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -868,6 +879,7 @@
 		CB7CB7881BF3C8AB008281DC /* Uitility */ = {
 			isa = PBXGroup;
 			children = (
+				CB99060D1C09034600CCF818 /* MapManager */,
 				CB075E061BFC8D2A00F6069C /* weatherMeaningTranform */,
 				CB6F50981BF50302008F8D89 /* StringHeightAndWidth */,
 				CB6F50941BF501D6008F8D89 /* SetRect */,
@@ -916,7 +928,6 @@
 			children = (
 				CB6F50801BF4FB5F008F8D89 /* Fonts */,
 				CB7CB78B1BF3C8AB008281DC /* LaunchScreen.xib */,
-				CB7CB78D1BF3C8AB008281DC /* Main.storyboard */,
 				CB7CB78F1BF3C8AB008281DC /* Images.xcassets */,
 			);
 			path = Resources;
@@ -929,6 +940,15 @@
 				CB7CB7921BF3C8AB008281DC /* main.m */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		CB99060D1C09034600CCF818 /* MapManager */ = {
+			isa = PBXGroup;
+			children = (
+				CB99060E1C09036100CCF818 /* LZLocationManager.h */,
+				CB99060F1C09036100CCF818 /* LZLocationManager.m */,
+			);
+			path = MapManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1013,7 +1033,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB9DD9461BF91E490005FE2B /* LaunchScreen.xib in Resources */,
-				CB9DD9451BF91E400005FE2B /* Main.storyboard in Resources */,
 				CB6F508C1BF4FB5F008F8D89 /* Weather&Time.ttf in Resources */,
 				CB6F50881BF4FB5F008F8D89 /* Lato-Light.ttf in Resources */,
 				CB6F508B1BF4FB5F008F8D89 /* Lato-ThinItalic.ttf in Resources */,
@@ -1044,10 +1063,12 @@
 				CB6F506A1BF4CFDE008F8D89 /* LZWind.m in Sources */,
 				CB6F51301BF50CBA008F8D89 /* POPVector.mm in Sources */,
 				CB24A9321BFA6D9E00748C94 /* CALayer+LZMaskLayer.m in Sources */,
+				CB9906131C093FA700CCF818 /* LZViewController.m in Sources */,
 				CB6F50761BF4DE62008F8D89 /* LZCity.m in Sources */,
 				CB0D43D31C01FA3D00C3B8B1 /* LZRotateAngleView.m in Sources */,
 				CB0D43EE1C03971900C3B8B1 /* LZMaxTempCount.m in Sources */,
 				CB6F51231BF50CBA008F8D89 /* POPAnimationExtras.mm in Sources */,
+				CB9906161C094BC700CCF818 /* LZWeatherMainController.m in Sources */,
 				CB0D44351C0792C900C3B8B1 /* LZShowDownView.m in Sources */,
 				CB6F51311BF50CBA008F8D89 /* TransformationMatrix.cpp in Sources */,
 				CB9DD9391BF5D4D60005FE2B /* TWMessageBarManager.m in Sources */,
@@ -1115,6 +1136,7 @@
 				CB24A9231BFA145100748C94 /* LZStringPathView.m in Sources */,
 				CB0D43EB1C036AB500C3B8B1 /* LZWeatherIconView.m in Sources */,
 				CB075E091BFC8D2A00F6069C /* WeatherNumberMeaningTransform.m in Sources */,
+				CB9906101C09036100CCF818 /* LZLocationManager.m in Sources */,
 				CB0D43DC1C0211D300C3B8B1 /* LZHumidityCountLabel.m in Sources */,
 				CB6F50641BF4CC5E008F8D89 /* LZWeather.m in Sources */,
 				CB24A92C1BFA442800748C94 /* LZSnowView.m in Sources */,
@@ -1163,14 +1185,6 @@
 				CB7CB78C1BF3C8AB008281DC /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		CB7CB78D1BF3C8AB008281DC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB7CB78E1BF3C8AB008281DC /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
