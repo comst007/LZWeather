@@ -1,3 +1,4 @@
+
 //
 //  LZWeatherInfoView.h
 //  LZWeather
@@ -9,11 +10,23 @@
 #import <UIKit/UIKit.h>
 #import "LZWeatherInfo.h"
 #import "LZForecastInfo.h"
+
+@class LZWeatherInfoView;
+@protocol LZWeatherInfoViewProtocal <NSObject>
+
+- (void) weatherInfoViewDidPullDownRefresh:(LZWeatherInfoView *)infoView;
+
+- (void) weatherInfoViewDidPullUpLoadForecast:(LZWeatherInfoView *)infoView;
+
+
+@end
+
 @interface LZWeatherInfoView : UIView
 
 @property (nonatomic, strong) LZWeatherInfo *weatherInfo;
 @property (nonatomic, strong) LZForecastInfo *forecastInfo;
 
+@property (nonatomic, weak) id<LZWeatherInfoViewProtocal> delegate;
 
 - (void)buildview;
 

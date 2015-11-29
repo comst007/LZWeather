@@ -20,8 +20,11 @@
         [self.weather setValuesForKeysWithDictionary:[value firstObject]];
         return;
     }
+    if ([key isEqualToString:@"dt"]) {
+        
+        [super setValue:value forKey:key];
+    }
     
-    [super setValue:value forKey:key];
     
 }
 

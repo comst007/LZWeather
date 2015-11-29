@@ -41,7 +41,7 @@
 
 - (void)builview{
     self.backgroundColor = [[UIColor whiteColor]  colorWithAlphaComponent:0.9];
-    
+    self.alpha = 0;
     [self buildStationview];
     [self buildRedview];
     [self buildBlackview];
@@ -236,6 +236,8 @@
         
     }
     [UIView animateWithDuration:1.0 animations:^{
+        
+        self.alpha = 1;
         self.stationLabel.alpha = 1.0;
         self.stationLabel.frame = self.stationRect.midRect;
         
@@ -264,6 +266,7 @@
 - (void)hide{
     [self.weatherView hide];
     [UIView animateWithDuration:0.75 animations:^{
+        self.alpha = 0;
         self.stationLabel.alpha = 0;
         self.stationLabel.frame = self.stationRect.endRect;
         

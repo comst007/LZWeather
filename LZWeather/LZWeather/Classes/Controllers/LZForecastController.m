@@ -70,7 +70,9 @@
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    
+    if (scrollView.contentOffset.y <= -60) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -112,9 +114,15 @@
     return nil;
 }
 
+
 - (void)setForecastInfo:(LZForecastInfo *)forecastInfo{
     _forecastInfo = forecastInfo;
     self.weatherDataArray = forecastInfo.list;
     [self.tableview reloadData];
+}
+
+- (BOOL)prefersStatusBarHidden{
+    
+    return YES;
 }
 @end

@@ -25,7 +25,7 @@
 #import "LZWeatherRequest.h"
 #import "LZForecastRequest.h"
 
-@interface LZWeatherMainController ()<LZLocationManagerProtocal, LZLoadviewDelegate>
+@interface LZWeatherMainController ()<LZLocationManagerProtocal, LZLoadviewDelegate, LZWeatherInfoViewProtocal>
 
 @property (nonatomic, strong) LZLocationManager *locationManager;
 @property (nonatomic, strong) LZWeatherInfoView *weatherInfoView;
@@ -45,9 +45,9 @@
     
     
     
-    self.weatherInfoView = [[LZWeatherInfoView alloc] initWithFrame:self.view.bounds];
-    [self.weatherInfoView buildview];
-    [self.view addSubview:self.weatherInfoView];
+    
+    
+
     
     self.weatherLoadView = [[LZLoadview alloc] initWithFrame:self.view.bounds];
     [self.weatherLoadView builview];
@@ -64,7 +64,14 @@
     [self.view addSubview:self.updateView];
     
     
+    self.weatherInfoView = [[LZWeatherInfoView alloc] initWithFrame:self.view.bounds];
+    [self.weatherInfoView buildview];
+    self.weatherInfoView.delegate = self;
+    [self.view addSubview:self.weatherInfoView];
+    
+    
     [self.weatherLoadView show];
+    
     self.weatherLoadView.delegate = self;
     
 }
@@ -81,6 +88,25 @@
     [self.fadeBlackView show];
     [self.locationManager performSelector:@selector(start) withObject:nil afterDelay:3];
     
+}
+
+- (void)getForeCastInfo{
+    
+     __weak typeof(self) weakSelf = self;
+    NSDictionary *forecastArgDic = @{
+                                     @"apiKey":@"8781e4ef1c73ff20a180d3d7a42a8c04",
+                                     @"cnt":@14,
+                                     @"id":[LZGlobal sharedGlobal].weatherInfo.cityID
+                                     };
+    
+    [self.forecastRequest forecastRequestWithArgDic:forecastArgDic completionHandler:^(LZForecastRequest *request) {
+        LZForecastController *forecastVC = [[LZForecastController alloc] init];
+        forecastVC.forecastInfo = [LZGlobal sharedGlobal].forecastInfo;
+        [weakSelf presentViewController:forecastVC animated:YES completion:^{
+            
+        }];
+        
+    }];
 }
 
 - (void)loadviewDidFinish:(LZLoadview *)loadview{
@@ -146,7 +172,26 @@
     return _weatherRequest;
 }
 
+- (LZForecastRequest *)forecastRequest{
+    if (!_forecastRequest) {
+        _forecastRequest = [[LZForecastRequest alloc] init];
+    }
+    return _forecastRequest;
+}
+
+
+
 - (BOOL)prefersStatusBarHidden{
     return YES;
+}
+
+- (void)weatherInfoViewDidPullUpLoadForecast:(LZWeatherInfoView *)infoView{
+    [self getForeCastInfo];
+}
+
+- (void)weatherInfoViewDidPullDownRefresh:(LZWeatherInfoView *)infoView{
+    
+    [self.weatherInfoView hide];
+    [self getLocation];
 }
 @end

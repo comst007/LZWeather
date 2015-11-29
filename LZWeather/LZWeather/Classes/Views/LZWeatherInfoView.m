@@ -44,6 +44,14 @@
 
 @implementation LZWeatherInfoView
 
+- (instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.alpha = 0;
+    }
+    return self;
+}
+
 - (void)buildview{
     self.tableview = [[UITableView alloc] initWithFrame:self.bounds];
     [self addSubview: self.tableview];
@@ -150,6 +158,7 @@
     if (self.weatherInfo == nil) {
         return;
     }
+    self.alpha = 1;
     self.humidityView.percent = @(self.weatherInfo.weatherMain.humidity.integerValue / 100.0);
     self.windSpeedView.windSpeed = self.weatherInfo.wind.speed;
     self.windSpeedView.circlePerSecond = @(self.windSpeedView.windSpeed.floatValue / 5);
@@ -188,7 +197,7 @@
 }
 
 - (void)hide{
-    
+    self.alpha = 0;
     [self.cityView hide];
     [self.weatherIconView hide];
     [self.temperatureView hide];
@@ -217,5 +226,15 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     
+    if (scrollView.contentOffset.y <= -60) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(weatherInfoViewDidPullDownRefresh:)]) {
+            [self.delegate weatherInfoViewDidPullDownRefresh:self];
+        }
+    }
+    if (scrollView.contentOffset.y >= 60) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(weatherInfoViewDidPullUpLoadForecast:)]) {
+            [self.delegate weatherInfoViewDidPullUpLoadForecast:self];
+        }
+    }
 }
 @end
