@@ -161,24 +161,6 @@
     }];
 }
 
-//- (void)getForeCastInfo{
-//    
-//    __weak typeof(self) weakSelf = self;
-//    NSDictionary *forecastArgDic = @{
-//                                     @"apiKey":@"8781e4ef1c73ff20a180d3d7a42a8c04",
-//                                     @"cnt":@14,
-//                                     @"id":[LZGlobal sharedGlobal].weatherInfo.cityID
-//                                     };
-//    
-//    [self.forecastRequest forecastRequestWithArgDic:forecastArgDic completionHandler:^(LZForecastRequest *request) {
-//        LZForecastController *forecastVC = [[LZForecastController alloc] init];
-//        forecastVC.forecastInfo = [LZGlobal sharedGlobal].forecastInfo;
-//        [weakSelf presentViewController:forecastVC animated:YES completion:^{
-//            
-//        }];
-//        
-//    }];
-//}
 
 
 - (LZWeatherRequest *)weatherRequest{
