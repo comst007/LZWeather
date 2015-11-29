@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
-#import "LZViewController.h"
+
 #import "LZWeatherMainController.h"
 @interface AppDelegate ()
 

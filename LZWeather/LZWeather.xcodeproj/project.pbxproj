@@ -108,7 +108,6 @@
 		CB7CB79F1BF3CA07008281DC /* LZWeatherRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7CB79E1BF3CA07008281DC /* LZWeatherRequest.m */; };
 		CB7CB7A51BF3CEF2008281DC /* LZForecastRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7CB7A41BF3CEF2008281DC /* LZForecastRequest.m */; };
 		CB9906101C09036100CCF818 /* LZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB99060F1C09036100CCF818 /* LZLocationManager.m */; };
-		CB9906131C093FA700CCF818 /* LZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9906121C093FA700CCF818 /* LZViewController.m */; };
 		CB9906161C094BC700CCF818 /* LZWeatherMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9906151C094BC700CCF818 /* LZWeatherMainController.m */; };
 		CB9DD9391BF5D4D60005FE2B /* TWMessageBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD9381BF5D4D60005FE2B /* TWMessageBarManager.m */; };
 		CB9DD93C1BF5D9550005FE2B /* LZLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD93B1BF5D9550005FE2B /* LZLabelView.m */; };
@@ -346,8 +345,6 @@
 		CB7CB7A41BF3CEF2008281DC /* LZForecastRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZForecastRequest.m; sourceTree = "<group>"; };
 		CB99060E1C09036100CCF818 /* LZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLocationManager.h; sourceTree = "<group>"; };
 		CB99060F1C09036100CCF818 /* LZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLocationManager.m; sourceTree = "<group>"; };
-		CB9906111C093FA700CCF818 /* LZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZViewController.h; sourceTree = "<group>"; };
-		CB9906121C093FA700CCF818 /* LZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZViewController.m; sourceTree = "<group>"; };
 		CB9906141C094BC700CCF818 /* LZWeatherMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZWeatherMainController.h; sourceTree = "<group>"; };
 		CB9906151C094BC700CCF818 /* LZWeatherMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZWeatherMainController.m; sourceTree = "<group>"; };
 		CB9DD9371BF5D4D60005FE2B /* TWMessageBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMessageBarManager.h; sourceTree = "<group>"; };
@@ -799,8 +796,6 @@
 				CB7CB7821BF3C8AB008281DC /* ViewController.m */,
 				CB0D443E1C07EE3000C3B8B1 /* LZForecastController.h */,
 				CB0D443F1C07EE3000C3B8B1 /* LZForecastController.m */,
-				CB9906111C093FA700CCF818 /* LZViewController.h */,
-				CB9906121C093FA700CCF818 /* LZViewController.m */,
 				CB9906141C094BC700CCF818 /* LZWeatherMainController.h */,
 				CB9906151C094BC700CCF818 /* LZWeatherMainController.m */,
 			);
@@ -1063,7 +1058,6 @@
 				CB6F506A1BF4CFDE008F8D89 /* LZWind.m in Sources */,
 				CB6F51301BF50CBA008F8D89 /* POPVector.mm in Sources */,
 				CB24A9321BFA6D9E00748C94 /* CALayer+LZMaskLayer.m in Sources */,
-				CB9906131C093FA700CCF818 /* LZViewController.m in Sources */,
 				CB6F50761BF4DE62008F8D89 /* LZCity.m in Sources */,
 				CB0D43D31C01FA3D00C3B8B1 /* LZRotateAngleView.m in Sources */,
 				CB0D43EE1C03971900C3B8B1 /* LZMaxTempCount.m in Sources */,
@@ -1207,7 +1201,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1229,6 +1224,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1250,7 +1246,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1265,6 +1262,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1319,6 +1317,7 @@
 				INFOPLIST_FILE = LZWeatherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7e598f51-afad-4db8-bf4c-8c84b0d01658";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZWeather.app/LZWeather";
 			};
 			name = Debug;
@@ -1334,6 +1333,7 @@
 				INFOPLIST_FILE = LZWeatherTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7e598f51-afad-4db8-bf4c-8c84b0d01658";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZWeather.app/LZWeather";
 			};
 			name = Release;

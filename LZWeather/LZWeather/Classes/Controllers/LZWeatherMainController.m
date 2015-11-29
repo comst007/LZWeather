@@ -90,24 +90,6 @@
     
 }
 
-- (void)getForeCastInfo{
-    
-     __weak typeof(self) weakSelf = self;
-    NSDictionary *forecastArgDic = @{
-                                     @"apiKey":@"8781e4ef1c73ff20a180d3d7a42a8c04",
-                                     @"cnt":@14,
-                                     @"id":[LZGlobal sharedGlobal].weatherInfo.cityID
-                                     };
-    
-    [self.forecastRequest forecastRequestWithArgDic:forecastArgDic completionHandler:^(LZForecastRequest *request) {
-        LZForecastController *forecastVC = [[LZForecastController alloc] init];
-        forecastVC.forecastInfo = [LZGlobal sharedGlobal].forecastInfo;
-        [weakSelf presentViewController:forecastVC animated:YES completion:^{
-            
-        }];
-        
-    }];
-}
 
 - (void)loadviewDidFinish:(LZLoadview *)loadview{
     
@@ -155,15 +137,49 @@
                                     };
      __weak typeof(self) weakSelf = self;
     [self.weatherRequest weatherRequestWithArgDic:weatherArgDic completionHandler:^(LZWeatherRequest *request) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.weatherInfoView.weatherInfo = [LZGlobal sharedGlobal].weatherInfo;
-            [weakSelf.weatherInfoView show];
-                
+        
+        
+        NSDictionary *forecastArgDic = @{
+                                         @"apiKey":@"8781e4ef1c73ff20a180d3d7a42a8c04",
+                                         @"cnt":@14,
+                                         @"id":[LZGlobal sharedGlobal].weatherInfo.cityID
+                                         };
+        [weakSelf.forecastRequest forecastRequestWithArgDic:forecastArgDic completionHandler:^(LZForecastRequest *request) {
             
-        });
+            
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.weatherInfoView.weatherInfo = [LZGlobal sharedGlobal].weatherInfo;
+                [weakSelf.weatherInfoView show];
+                
+                
+            });
+            
+        }];
+        
         
     }];
 }
+
+//- (void)getForeCastInfo{
+//    
+//    __weak typeof(self) weakSelf = self;
+//    NSDictionary *forecastArgDic = @{
+//                                     @"apiKey":@"8781e4ef1c73ff20a180d3d7a42a8c04",
+//                                     @"cnt":@14,
+//                                     @"id":[LZGlobal sharedGlobal].weatherInfo.cityID
+//                                     };
+//    
+//    [self.forecastRequest forecastRequestWithArgDic:forecastArgDic completionHandler:^(LZForecastRequest *request) {
+//        LZForecastController *forecastVC = [[LZForecastController alloc] init];
+//        forecastVC.forecastInfo = [LZGlobal sharedGlobal].forecastInfo;
+//        [weakSelf presentViewController:forecastVC animated:YES completion:^{
+//            
+//        }];
+//        
+//    }];
+//}
+
 
 - (LZWeatherRequest *)weatherRequest{
     if (!_weatherRequest) {
@@ -186,7 +202,12 @@
 }
 
 - (void)weatherInfoViewDidPullUpLoadForecast:(LZWeatherInfoView *)infoView{
-    [self getForeCastInfo];
+    LZForecastController *forecastVC = [[LZForecastController alloc] init];
+    forecastVC.forecastInfo = [LZGlobal sharedGlobal].forecastInfo;
+    [self presentViewController:forecastVC animated:YES completion:^{
+        
+    }];
+
 }
 
 - (void)weatherInfoViewDidPullDownRefresh:(LZWeatherInfoView *)infoView{
